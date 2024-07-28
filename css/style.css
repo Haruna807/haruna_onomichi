@@ -1,0 +1,108 @@
+body {
+  font-family: "Noto Sans JP", "Kiwi Maru", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4A3636;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+.inner {
+  padding-inline: 20px;
+}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 4px 22px 6px;
+  border-radius: 40px;
+  border: 2px solid #4A3636;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 0px 0px #4A3636;
+          box-shadow: 0px 4px 0px 0px #4A3636;
+}
+
+.header {
+  height: 64px;
+  background: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header__inner {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo a img {
+  width: 210px;
+}
+
+.header__icon {
+  display: block;
+}
+
+.drawer-icon img {
+  width: 32px;
+}
+
+.header__nav {
+  background: #FFFFFF;
+  width: 100%;
+  height: calc(100% - 64px);
+  position: fixed;
+  right: 0;
+  top: 64px;
+  padding: 82px 114px;
+  font-size: 18px;
+  text-align: center;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  z-index: 1;
+}
+.header__nav.is-checked {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.header__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.header__link {
+  font-size: 14px;
+}
+
+.drawer-content_button {
+  margin-top: 40px;
+}

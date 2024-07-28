@@ -1,1 +1,149 @@
 @use "sass:map";
+
+$main-color: #9ED0E0;
+
+$sub-color-DBlue: #67B0C7;
+$sub-color-BGray: #CCE1E4;
+$sub-color-LBlue: #E9F6F8;
+
+$accent-color-Red: #CE2073;
+$accent-color-Yellow: #FFEE56;
+
+$mono-color-Blown: #4A3636;
+$mono-color-DGray: #CCCCCC;
+$mono-color-Gray: #F5F5F5;
+$mono-color-White: #FFFFFF;
+
+$text-color-br: #4A3636;
+$text-color-wh: #FFFFFF;
+
+
+$font-family-ja: "Noto Sans JP", "Kiwi Maru", sans-serif;
+$font-family-en: "Courgette", "Josefin Sans", cursive, sans-serif;
+
+$font-size-base-sp: 12px;
+$font-size-base-pc: 16px;
+
+$header-height: 64px;
+
+$breakpoints: (
+  sp: "not screen and (min-width: 768px)",
+  pc: "screen and (min-width: 768px)",
+);
+
+@mixin mq($breakpoint: pc) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// 共通
+
+body {
+  font-family: $font-family-ja;
+  font-size: $font-size-base-sp;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $text-color-br;
+
+  @include mq("pc") {
+    font-size: $font-size-base-pc;
+  }
+}
+
+.inner {
+  padding-inline: 20px;
+}
+
+// ボタン
+.button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+  border-radius: 40px;
+  border: 2px solid $mono-color-Blown;
+  background: $mono-color-White;
+  box-shadow: 0px 4px 0px 0px $mono-color-Blown;
+}
+
+
+
+//ヘッダー
+
+.header {
+  height: $header-height;
+  background: $mono-color-White;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  a {
+    img {
+      width: 210px;
+    }
+  }
+}
+
+.header__icon {
+  display: block;
+}
+
+.drawer-icon {
+  img {
+    width: 32px;
+  }
+}
+
+.header__nav {
+  background: $mono-color-White;
+  width: 100%;
+  height: calc(100% - $header-height);
+  position: fixed;
+  right: 0;
+  top: $header-height;
+  padding:  82px 114px;
+  font-size: 18px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+  z-index: 1;
+
+  &.is-checked {
+    transform: translateY(0);
+  }
+}
+
+.header__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header__list {
+
+}
+
+.header__link {
+  font-size: 14px;
+}
+
+.drawer-content_button {
+  margin-top: 40px;
+}
+
+
+
