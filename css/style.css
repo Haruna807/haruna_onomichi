@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  font-family: "Noto Sans JP", "Kiwi Maru", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.6;
@@ -131,6 +131,7 @@ body {
             align-items: center;
     padding-right: 24px;
     font-size: 19px;
+    font-weight: 400;
   }
 }
 
@@ -172,4 +173,8 @@ body {
     margin-top: 0;
     font-size: 14px;
   }
+}
+
+.fv {
+  padding-top: 64px;
 }

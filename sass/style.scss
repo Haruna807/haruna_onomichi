@@ -18,7 +18,8 @@ $text-color-br: #4A3636;
 $text-color-wh: #FFFFFF;
 
 
-$font-family-ja: "Noto Sans JP", "Kiwi Maru", sans-serif;
+$font-family-ja-1: "Noto Sans JP", sans-serif;
+$font-family-ja-2: "Kiwi Maru", serif;
 $font-family-en: "Courgette", "Josefin Sans", cursive, sans-serif;
 
 $font-size-base-sp: 12px;
@@ -40,7 +41,7 @@ $breakpoints: (
 // 共通
 
 body {
-  font-family: $font-family-ja;
+  font-family: $font-family-ja-1;
   font-size: $font-size-base-sp;
   font-weight: 400;
   line-height: 1.6;
@@ -159,6 +160,7 @@ body {
     align-items: center;
     padding-right: 24px;
     font-size: 19px;
+    font-weight: 400;
   }
 }
 
@@ -195,6 +197,70 @@ body {
     font-size: 14px;
   }
 }
+
+// ファーストビュー
+
+.fv {
+  padding-top: $header-height;
+}
+
+.fv__inner {
+
+}
+
+.fv__message {
+
+}
+
+.fv__title {
+
+}
+
+.fv__title-1 {
+
+}
+
+.fv__title-2 {
+
+}
+
+.fv__fukidashi {
+
+}
+
+.fv__present {
+
+}
+
+.fv__img-sp {
+
+}
+
+.fv__img-food {
+
+}
+
+.fv__img-food1 {
+
+}
+
+.fv__img-food2 {
+
+}
+
+.fv__img-cats {
+
+}
+
+.fv__img-cat-bk {
+
+}
+
+.fv__img-cat-br {
+
+}
+
+
 
 
 
