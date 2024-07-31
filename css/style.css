@@ -177,4 +177,89 @@ body {
 
 .fv {
   padding-top: 64px;
+  background: url(../img/sp/Onomichi_fv_bg_sp.png) no-repeat top center/contain, #E9F6F8;
+  background-position: center top 64px;
+}
+
+.fv__message {
+  font-family: "Kiwi Maru", serif;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 17px;
+  line-height: 1.25;
+  color: #4A3636;
+  text-shadow: 0px 0px 30px #FFF;
+}
+
+.fv__title {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fv__title-1 {
+  width: 335px;
+}
+
+.fv__title-2 {
+  width: 240px;
+}
+
+.fv-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 58px;
+}
+
+.fv__fukidashi {
+  width: 142px;
+  margin-top: 17px;
+}
+
+.fv__present {
+  width: 110px;
+  margin-top: 10px;
+}
+
+.fv__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fv__img-sp {
+  width: 200px;
+}
+
+.fv__img-food {
+  width: 86px;
+}
+
+.fv__img-cat-bk {
+  width: 62px;
+}
+
+.fv__img-cat-br {
+  width: 98px;
 }
