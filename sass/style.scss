@@ -202,8 +202,25 @@ body {
 
 .fv {
   padding-top: $header-height;
-  background: url(../img/sp/Onomichi_fv_bg_sp.png) no-repeat top center / contain, $sub-color-LBlue;
+  background: url(../img/sp/onomichi_fv_bg_sp.png) no-repeat top center / contain, $sub-color-LBlue;
   background-position: center top $header-height;
+
+  @include mq("pc") {
+    background: $sub-color-LBlue;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url(../img/onomichi_fv_bg.png) no-repeat top center / contain;
+      border-radius: 0px 0px 40px 40px;
+    }
+  }
 }
 
 .fv__inner {
@@ -218,6 +235,13 @@ body {
   line-height: 1.25;
   color: $mono-color-Blown;
   text-shadow: 0px 0px 30px #FFF;
+
+  @include mq("pc") {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 34px;
+  }
 }
 
 .fv__title {
@@ -226,14 +250,28 @@ body {
   flex-direction: column;
   gap: 12px;
   align-items: center;
+
+  @include mq("pc") {
+    position: relative;
+    margin-top: 24px;
+    gap: 16px;
+  }
 }
 
 .fv__title-1 {
   width: 335px;
+
+  @include mq("pc") {
+    width: 520px;
+  }
 }
 
 .fv__title-2 {
   width: 240px;
+
+  @include mq("pc") {
+    width: 356px;
+  }
 }
 
 
@@ -242,19 +280,36 @@ body {
   display: flex;
   flex-direction: row;
   gap: 58px;
+
+  @include mq("pc") {
+    position: relative;
+    justify-content: center;
+    gap: 260px;
+    margin-right: 92px;
+  }
 }
 
 .fv__fukidashi {
   width: 142px;
   margin-top: 17px;
+
+  @include mq("pc") {
+    width: 244px;
+    margin-top: 0;
+  }
 }
 
 .fv__present {
   width: 110px;
   margin-top: 10px;
+
+  @include mq("pc") {
+    width: 180px;
+    margin-top: 17px;
+  }
 }
 
-.fv__content {
+.fv__image_sp {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -262,22 +317,73 @@ body {
 
 .fv__img-sp {
   width: 200px;
+  position: relative;
+  top: -7px;
+
+  @include mq("pc") {
+    display: none;
+  }
 }
+
+.fv__img-sp_pc {
+  display: none;
+
+  @include mq("pc") {
+    display: block;
+    background-image: url(../img/fv_smartphone.png);
+    background-size: cover;
+    width: 250px;
+    top: -163px;
+  }
+}
+
+.fv__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -130px;
+
+  @include mq("pc") {
+    margin-top: 0;
+    justify-content: center;
+    gap: 413px;
+  }
+}
+
 
 .fv__img-food {
   width: 86px;
+  position: relative;
+
+  @include mq("pc") {
+    width: 202px;
+  }
 }
 
 .fv__img-cats {
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .fv__img-cat-bk {
   width: 62px;
+  position: relative;
+
+  @include mq("pc") {
+    width: 170px;
+  }
 }
 
 .fv__img-cat-br {
   width: 98px;
+  position: relative;
+  top: -10px;
+  margin-right: 9px;
+
+  @include mq("pc") {
+    width: 233px;
+  }
 }
 
 
