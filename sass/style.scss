@@ -181,6 +181,10 @@ body {
 
 .header__link {
   font-size: 14px;
+
+  @include mq("pc") {
+    font-size: 12px;
+  }
 }
 
 .header__link_t {
@@ -219,6 +223,7 @@ body {
       bottom: 0;
       background: url(../img/onomichi_fv_bg.png) no-repeat top center / contain;
       border-radius: 0px 0px 40px 40px;
+      margin-top: $header-height;
     }
   }
 }
@@ -321,17 +326,16 @@ body {
   top: -7px;
 
   @include mq("pc") {
-    display: none;
+    display: none !important;
   }
 }
 
 .fv__img-sp_pc {
-  display: none;
+  display: none !important;
 
   @include mq("pc") {
-    display: block;
-    background-image: url(../img/fv_smartphone.png);
-    background-size: cover;
+    display: block !important;
+    position: relative;
     width: 250px;
     top: -163px;
   }
@@ -346,7 +350,8 @@ body {
   @include mq("pc") {
     margin-top: 0;
     justify-content: center;
-    gap: 413px;
+    gap: 403px;
+    margin-top: -505px;
   }
 }
 
@@ -356,7 +361,8 @@ body {
   position: relative;
 
   @include mq("pc") {
-    width: 202px;
+    width: 213px;
+    top: 25px;
   }
 }
 
@@ -372,6 +378,8 @@ body {
 
   @include mq("pc") {
     width: 170px;
+    top: 105px;
+    margin-right: 62px;
   }
 }
 
@@ -383,6 +391,8 @@ body {
 
   @include mq("pc") {
     width: 233px;
+    top: 41px;
+    margin-right: 0;
   }
 }
 

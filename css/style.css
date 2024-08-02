@@ -158,6 +158,11 @@ body {
 .header__link {
   font-size: 14px;
 }
+@media screen and (min-width: 768px) {
+  .header__link {
+    font-size: 12px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .header__link_t {
@@ -195,6 +200,7 @@ body {
     bottom: 0;
     background: url(../img/onomichi_fv_bg.png) no-repeat top center/contain;
     border-radius: 0px 0px 40px 40px;
+    margin-top: 64px;
   }
 }
 
@@ -319,18 +325,17 @@ body {
 }
 @media screen and (min-width: 768px) {
   .fv__img-sp {
-    display: none;
+    display: none !important;
   }
 }
 
 .fv__img-sp_pc {
-  display: none;
+  display: none !important;
 }
 @media screen and (min-width: 768px) {
   .fv__img-sp_pc {
-    display: block;
-    background-image: url(../img/fv_smartphone.png);
-    background-size: cover;
+    display: block !important;
+    position: relative;
     width: 250px;
     top: -163px;
   }
@@ -355,7 +360,8 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 413px;
+    gap: 403px;
+    margin-top: -505px;
   }
 }
 
@@ -365,7 +371,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .fv__img-food {
-    width: 202px;
+    width: 213px;
+    top: 25px;
   }
 }
 
@@ -389,6 +396,8 @@ body {
 @media screen and (min-width: 768px) {
   .fv__img-cat-bk {
     width: 170px;
+    top: 105px;
+    margin-right: 62px;
   }
 }
 
@@ -401,5 +410,7 @@ body {
 @media screen and (min-width: 768px) {
   .fv__img-cat-br {
     width: 233px;
+    top: 41px;
+    margin-right: 0;
   }
 }
