@@ -25,24 +25,39 @@
       <h1 class="header__logo">
         <a href="/"><img src="./img/logo.png" alt="SnapOnomichi"></a>
       </h1>
-      <button type="button" id="js-drawer-button" class="header__icon drawer-icon">
-        <img src="./img/sp/drawer-icon.png" alt="">
-      </button>
-      <nav id="js-drawer-content" class="header__nav">
+      <nav class="header__nav">
         <ul class="header__lists">
           <li class="header__list"><a href="#about" class="header__link">キャンペーンについて</a></li>
-          <li class="header__list"><a href="#prizes" class="header__link"><span class="hidden-pc">キャンペーン</span>特典</a></li>
+          <li class="header__list"><a href="#prizes" class="header__link">特典</a></li>
           <li class="header__list"><a href="#spots" class="header__link">おすすめスポット</a></li>
           <li class="header__list"><a href="#qa" class="header__link">よくある質問</a></li>
           <li class="header__list"><a href="#entry_requirements" class="header__link">参加要項</a></li>
-          <li class="header__list"><a href="#contact" class="header__link header__link_t">お問い合わせ</a></li>
         </ul>
         <div class="drawer-content_button">
           <a href="#" class="button">応募してみる</a>
         </div>
       </nav>
+      <button type="button" id="js-drawer-button" class="header__icon drawer-icon">
+        <img src="./img/sp/drawer-icon.png" alt="">
+      </button>
     </div>
   </header>
+
+  <div id="js-drawer-content" class="drawer-content">
+    <nav class="drawer-content__menu">
+      <ul class="header__lists">
+        <li class="header__list"><a href="#about" class="header__link">キャンペーンについて</a></li>
+        <li class="header__list"><a href="#prizes" class="header__link"><span class="hidden-pc">キャンペーン</span>特典</a></li>
+        <li class="header__list"><a href="#spots" class="header__link">おすすめスポット</a></li>
+        <li class="header__list"><a href="#qa" class="header__link">よくある質問</a></li>
+        <li class="header__list"><a href="#entry_requirements" class="header__link">参加要項</a></li>
+        <li class="header__list"><a href="#contact" class="header__link header__link_t">お問い合わせ</a></li>
+      </ul>
+      <div class="drawer-content_button">
+        <a href="#" class="button">応募してみる</a>
+      </div>
+    </nav>
+  </div>
 
   <main class="main">
 
@@ -89,11 +104,65 @@
       </div>
     </div>
 
+    <section class="about">
+      <div class="about__background-image__ashiato">
+        <img src="./img/ashiato_default.png" alt="">
+      </div>
+      <picture class="about__background-image__right">
+        <source media="(min-width: 900px)" srcset="./img/about_photo_right.png">
+        <img src="./img/sp/about_photo_right_sp.png" alt="">
+      </picture>
+      <picture class="about__background-image__left">
+        <source media="(min-width: 900px)" srcset="./img/about_photo_left.png">
+        <img src="./img/sp/about_photo_left_sp.png" alt="">
+      </picture>
+      <div class="about__inner inner">
+        <div class="about__contents">
+          <div class="about__image-left">
+            <img src="./img/about_pic1.png" alt="">
+          </div>
+          <div class="about__image-right">
+            <img src="./img/about_pic2.png" alt="">
+          </div>
+          <div class="heading">
+            <div class="heading__icon">
+              <img src="./img/about_icon.png" alt="">
+            </div>
+            <div class="heading__en">About</div>
+            <h2 class="heading__ja">キャンペーンについて</h2>
+          </div>
+          <h3 class="about__lead">
+            あなたの心が動いた尾道の瞬間を<br>＼ おしえてください！ ／
+          </h3>
+          <div class="about__text">
+            <p class="about-text">
+              風情あふれる坂道に、静かに佇むお寺。<br>路地裏の角をまがれば<br>気ままにお昼寝する猫に出会え、<br>ふと振り返れば、美しい瀬戸内の海が。
+            </p>
+            <p class="about-text">
+              数々の映画の舞台にもなってきたこの街には<br>心がほどけるような、<br>レトロでやさしい風景が広がっています。
+            </p>
+            <p class="about-text">
+              あなたの見つけた尾道のなつかしい景色を、<br>ぜひおしえてください。
+            </p>
+            <p class="about-text">
+              尾道観光部（@onomichi_retro）を<br>フォロー&尾道で撮影した写真を、<br>ハッシュタグ「#見つけて尾道レトロ」を<br>つけてInstagramに投稿いただいた方の中から
+            </p>
+            <p class="about-text">
+              尾道のギフトを100名様にプレゼント！
+            </p>
+          </div>
+          <div class="about__button">
+            <a href="#" class="button">参加の仕方はこちら</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 
   </main>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>

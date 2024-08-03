@@ -28,11 +28,13 @@ $font-size-base-pc: 16px;
 $header-height: 64px;
 
 $breakpoints: (
-  sp: "not screen and (min-width: 768px)",
-  pc: "screen and (min-width: 768px)",
+  sm: "screen and (min-width:600px)",
+  md: "screen and (min-width:768px)",
+  lg: "screen and (min-width:900px)",
+  xl: "screen and (min-width:1200px)",
 );
 
-@mixin mq($breakpoint: pc) {
+@mixin mq($breakpoint: lg) {
   @media #{map.get($breakpoints, $breakpoint)} {
     @content;
   }
@@ -47,7 +49,7 @@ body {
   line-height: 1.6;
   color: $text-color-br;
 
-  @include mq("pc") {
+  @include mq("lg") {
     font-size: $font-size-base-pc;
   }
 }
@@ -57,7 +59,7 @@ body {
 }
 
 .hidden-pc {
-  @include mq("pc") {
+  @include mq("lg") {
     display: none;
   }
 }
@@ -73,6 +75,11 @@ body {
   border: 2px solid $mono-color-Blown;
   background: $mono-color-White;
   box-shadow: 0px 4px 0px 0px $mono-color-Blown;
+
+
+  @include mq("lg") {
+    font-size: 14px;
+  }
 }
 
 
@@ -96,7 +103,7 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  @include mq("pc") {
+  @include mq("lg") {
     padding-inline: 24px;
   }
 }
@@ -106,13 +113,13 @@ body {
     img {
       width: 210px;
 
-      @include mq("pc") {
+      @include mq("lg") {
         width: 183px;
       }
     }
   }
 
-  @include mq("pc") {
+  @include mq("lg") {
     z-index: 2;
   }
 }
@@ -120,7 +127,7 @@ body {
 .header__icon {
   display: block;
 
-  @include mq("pc") {
+  @include mq("xl") {
     display: none;
   }
 }
@@ -132,23 +139,13 @@ body {
 }
 
 .header__nav {
-  padding:  82px 114px;
-  font-size: 18px;
-  text-align: center;
-  position:fixed;
-  z-index: 999;
-  top:-120%;
-  left:0;
-  width:100%;
-  height: 100vh;/*ナビの高さ*/
-  background: $mono-color-White;
-  transition: all 0.4s;
+  display: none;
 
-  &.is-checked {
-    top: $header-height;
+  @include mq("lg") {
+    font-size: 14px;
   }
 
-  @include mq("pc") {
+  @include mq("xl") {
     top: 0;
     display: flex;
     flex-direction: row;
@@ -158,7 +155,6 @@ body {
     z-index: 0;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 24px;
     font-size: 19px;
     font-weight: 400;
   }
@@ -169,7 +165,7 @@ body {
   flex-direction: column;
   gap: 40px;
 
-  @include mq("pc") {
+  @include mq("xl") {
     flex-direction: row;
     gap: 12px;
   }
@@ -182,24 +178,41 @@ body {
 .header__link {
   font-size: 14px;
 
-  @include mq("pc") {
+  @include mq("xl") {
     font-size: 12px;
-  }
-}
-
-.header__link_t {
-  @include mq("pc") {
-    display: none;
   }
 }
 
 .drawer-content_button {
   margin-top: 40px;
 
-  @include mq("pc") {
+
+  @include mq("xl") {
     margin-top: 0;
-    font-size: 14px;
+    padding-left: 16px;
   }
+}
+
+.drawer-content {
+  padding:  82px 114px;
+  font-size: 18px;
+  text-align: center;
+  position:fixed;
+  z-index: 999;
+  left:0;
+  width:100%;
+  background: $mono-color-White;
+  top: $header-height;
+  display: none;
+  height: calc(100dvh - 64px);
+  padding-top: 59px;
+  padding-bottom: 60px;
+  overflow-y: auto;
+
+  &.is-checked {
+    display: block;
+  }
+
 }
 
 // ファーストビュー
@@ -209,7 +222,7 @@ body {
   background: url(../img/sp/onomichi_fv_bg_sp.png) no-repeat top center / contain, $sub-color-LBlue;
   background-position: center top $header-height;
 
-  @include mq("pc") {
+  @include mq("lg") {
     background: $sub-color-LBlue;
     overflow: hidden;
 
@@ -241,7 +254,7 @@ body {
   color: $mono-color-Blown;
   text-shadow: 0px 0px 30px #FFF;
 
-  @include mq("pc") {
+  @include mq("lg") {
     position: relative;
     font-size: 24px;
     font-weight: 500;
@@ -256,7 +269,7 @@ body {
   gap: 12px;
   align-items: center;
 
-  @include mq("pc") {
+  @include mq("lg") {
     position: relative;
     margin-top: 24px;
     gap: 16px;
@@ -266,7 +279,7 @@ body {
 .fv__title-1 {
   width: 335px;
 
-  @include mq("pc") {
+  @include mq("lg") {
     width: 520px;
   }
 }
@@ -274,7 +287,7 @@ body {
 .fv__title-2 {
   width: 240px;
 
-  @include mq("pc") {
+  @include mq("lg") {
     width: 356px;
   }
 }
@@ -286,7 +299,11 @@ body {
   flex-direction: row;
   gap: 58px;
 
-  @include mq("pc") {
+  @include mq("sm") {
+    justify-content: center;
+  }
+
+  @include mq("lg") {
     position: relative;
     justify-content: center;
     gap: 260px;
@@ -298,7 +315,7 @@ body {
   width: 142px;
   margin-top: 17px;
 
-  @include mq("pc") {
+  @include mq("lg") {
     width: 244px;
     margin-top: 0;
   }
@@ -308,7 +325,7 @@ body {
   width: 110px;
   margin-top: 10px;
 
-  @include mq("pc") {
+  @include mq("lg") {
     width: 180px;
     margin-top: 17px;
   }
@@ -325,7 +342,7 @@ body {
   position: relative;
   top: -7px;
 
-  @include mq("pc") {
+  @include mq("lg") {
     display: none !important;
   }
 }
@@ -333,7 +350,7 @@ body {
 .fv__img-sp_pc {
   display: none !important;
 
-  @include mq("pc") {
+  @include mq("lg") {
     display: block !important;
     position: relative;
     width: 250px;
@@ -347,7 +364,12 @@ body {
   justify-content: space-between;
   margin-top: -130px;
 
-  @include mq("pc") {
+  @include mq("sm") {
+    justify-content: center;
+    gap: 143px;
+  }
+
+  @include mq("lg") {
     margin-top: 0;
     justify-content: center;
     gap: 403px;
@@ -360,7 +382,7 @@ body {
   width: 86px;
   position: relative;
 
-  @include mq("pc") {
+  @include mq("lg") {
     width: 213px;
     top: 25px;
   }
@@ -376,7 +398,7 @@ body {
   width: 62px;
   position: relative;
 
-  @include mq("pc") {
+  @include mq("lg") {
     width: 170px;
     top: 105px;
     margin-right: 62px;
@@ -389,7 +411,7 @@ body {
   top: -10px;
   margin-right: 9px;
 
-  @include mq("pc") {
+  @include mq("lg") {
     width: 233px;
     top: 41px;
     margin-right: 0;
