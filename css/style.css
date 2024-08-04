@@ -4,15 +4,12 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #4A3636;
+  background: #E9F6F8;
 }
 @media screen and (min-width:900px) {
   body {
     font-size: 16px;
   }
-}
-
-.inner {
-  padding-inline: 20px;
 }
 
 @media screen and (min-width:900px) {
@@ -62,6 +59,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-inline: 20px;
 }
 @media screen and (min-width:900px) {
   .header__inner {
@@ -190,12 +188,31 @@ body {
 
 .fv {
   padding-top: 64px;
-  background: url(../img/sp/onomichi_fv_bg_sp.png) no-repeat top center/contain, #E9F6F8;
-  background-position: center top 64px;
+}
+.fv::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../img/sp/onomichi_fv_bg_sp.png) no-repeat center center/cover;
+  border-radius: 0px 0px 24px 24px;
+  max-height: 554px;
+  margin-top: 64px;
+}
+@media screen and (min-width:600px) {
+  .fv {
+    overflow: hidden;
+  }
+  .fv::before {
+    height: 100%;
+    border-radius: 0px 0px 24px 24px;
+  }
 }
 @media screen and (min-width:900px) {
   .fv {
-    background: #E9F6F8;
     overflow: hidden;
   }
   .fv::before {
@@ -206,13 +223,26 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(../img/onomichi_fv_bg.png) no-repeat top center/contain;
+    background: url(../img/onomichi_fv_bg.png) no-repeat center bottom/cover;
     border-radius: 0px 0px 40px 40px;
     margin-top: 64px;
+    max-height: 740px;
+  }
+}
+
+.fv__inner {
+  max-width: 335px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width:900px) {
+  .fv__inner {
+    max-width: 848px;
   }
 }
 
 .fv__message {
+  position: relative;
   font-family: "Kiwi Maru", serif;
   text-align: center;
   font-size: 14px;
@@ -231,6 +261,7 @@ body {
 }
 
 .fv__title {
+  position: relative;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,33 +275,22 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.fv__title img {
+  width: 100%;
+}
+@media screen and (min-width:900px) {
+  .fv__title img {
+    max-width: 520px;
+  }
+}
 @media screen and (min-width:900px) {
   .fv__title {
-    position: relative;
     margin-top: 24px;
-    gap: 16px;
-  }
-}
-
-.fv__title-1 {
-  width: 335px;
-}
-@media screen and (min-width:900px) {
-  .fv__title-1 {
-    width: 520px;
-  }
-}
-
-.fv__title-2 {
-  width: 240px;
-}
-@media screen and (min-width:900px) {
-  .fv__title-2 {
-    width: 356px;
   }
 }
 
 .fv-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,6 +299,9 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 58px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width:600px) {
   .fv-container {
@@ -364,9 +387,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 142px;
   margin-top: -130px;
 }
 @media screen and (min-width:600px) {

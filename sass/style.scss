@@ -48,6 +48,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: $text-color-br;
+  background: $sub-color-LBlue;
 
   @include mq("lg") {
     font-size: $font-size-base-pc;
@@ -55,7 +56,6 @@ body {
 }
 
 .inner {
-  padding-inline: 20px;
 }
 
 .hidden-pc {
@@ -102,6 +102,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-inline: 20px;
 
   @include mq("lg") {
     padding-inline: 24px;
@@ -219,11 +220,31 @@ body {
 
 .fv {
   padding-top: $header-height;
-  background: url(../img/sp/onomichi_fv_bg_sp.png) no-repeat top center / contain, $sub-color-LBlue;
-  background-position: center top $header-height;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/sp/onomichi_fv_bg_sp.png) no-repeat center center / cover;
+    border-radius: 0px 0px 24px 24px;
+    max-height: 554px;
+    margin-top: $header-height;
+  }
+
+  @include mq("sm") {
+    overflow: hidden;
+
+    &::before {
+      height: 100%;
+      border-radius: 0px 0px 24px 24px;
+    }
+  }
 
   @include mq("lg") {
-    background: $sub-color-LBlue;
     overflow: hidden;
 
     &::before {
@@ -234,18 +255,26 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      background: url(../img/onomichi_fv_bg.png) no-repeat top center / contain;
+      background: url(../img/onomichi_fv_bg.png) no-repeat center bottom / cover;
       border-radius: 0px 0px 40px 40px;
       margin-top: $header-height;
+      max-height: 740px;
     }
   }
 }
 
 .fv__inner {
+  max-width: 335px;
+  margin-right: auto;
+  margin-left: auto;
 
+  @include mq("lg") {
+    max-width: 848px;
+  }
 }
 
 .fv__message {
+  position: relative;
   font-family: $font-family-ja-2;
   text-align: center;
   font-size: 14px;
@@ -263,41 +292,34 @@ body {
 }
 
 .fv__title {
+  position: relative;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
 
+  img {
+    width: 100%;
+
+    @include mq("lg") {
+      max-width: 520px;
+    }
+  }
+
   @include mq("lg") {
-    position: relative;
     margin-top: 24px;
-    gap: 16px;
-  }
-}
-
-.fv__title-1 {
-  width: 335px;
-
-  @include mq("lg") {
-    width: 520px;
-  }
-}
-
-.fv__title-2 {
-  width: 240px;
-
-  @include mq("lg") {
-    width: 356px;
   }
 }
 
 
 
 .fv-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: 58px;
+  justify-content: center;
 
   @include mq("sm") {
     justify-content: center;
@@ -361,7 +383,7 @@ body {
 .fv__content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 142px;
   margin-top: -130px;
 
   @include mq("sm") {
