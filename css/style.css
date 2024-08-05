@@ -207,7 +207,8 @@ body {
     overflow: hidden;
   }
   .fv::before {
-    height: 100%;
+    background: url(../img/onomichi_fv_bg.png) no-repeat center bottom/cover;
+    max-height: 554px;
     border-radius: 0px 0px 24px 24px;
   }
 }
@@ -457,4 +458,36 @@ body {
     top: 41px;
     margin-right: 0;
   }
+}
+
+.about__background {
+  position: absolute;
+}
+
+.about__background-image__footprint {
+  width: 54px;
+}
+
+.about__background-image__pattern {
+  display: none;
+}
+
+.about__background-image__right {
+  width: 200px;
+}
+
+.about__background-image__left {
+  width: 200px;
+}
+
+.about__background-image__hill {
+  width: 138px;
+}
+
+.about__background-image__goods1 {
+  width: 48px;
+}
+
+.about__background-image__goods2 {
+  width: 133px;
 }

@@ -15,6 +15,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="./css/recet.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -101,17 +105,30 @@
     </div>
 
     <section class="about">
-      <div class="about__background-image__ashiato">
+      <div class="about__background about__background-image__footprint">
         <img src="./img/ashiato_default.png" alt="">
       </div>
-      <picture class="about__background-image__right">
+      <div class="about__background about__background-image__pattern">
+        <img src="./img/about_naname.png" alt="">
+      </div>
+      <picture class="about__background about__background-image__right">
         <source media="(min-width: 900px)" srcset="./img/about_photo_right.png">
         <img src="./img/sp/about_photo_right_sp.png" alt="">
       </picture>
-      <picture class="about__background-image__left">
+      <picture class="about__background about__background-image__left">
         <source media="(min-width: 900px)" srcset="./img/about_photo_left.png">
         <img src="./img/sp/about_photo_left_sp.png" alt="">
       </picture>
+      <picture class="about__background about__background-image__hill">
+        <source media="(min-width: 900px)" srcset="./img/about_hill.png">
+        <img src="./img/sp/about_hill_sm.png" alt="">
+      </picture>
+      <div class="about__background about__background-image__goods1">
+        <img src="./img/about_goods1.png" alt="">
+      </div>
+      <div class="about__background about__background-image__goods2">
+        <img src="./img/about_goods2.png" alt="">
+      </div>
       <div class="about__inner inner">
         <div class="about__contents">
           <div class="about__image-left">
@@ -151,13 +168,39 @@
             <a href="#" class="button">参加の仕方はこちら</a>
           </div>
         </div>
+        <div class="about__bottom">
+          <div class="about__bottom__decorative-text">
+            <img src="./img/about_onomichi_logo.png" alt="">
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
 
 
 
   </main>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./js/script.js"></script>
 </body>
