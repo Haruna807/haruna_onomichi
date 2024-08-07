@@ -352,7 +352,6 @@ body {
   display: flex;
   flex-direction: row;
   gap: 58px;
-  justify-content: center;
 
   @include mq("sm") {
     justify-content: center;
@@ -436,6 +435,8 @@ body {
 .fv__img-food {
   width: 86px;
   position: relative;
+  top: -3px;
+  left: 3px;
 
   @include mq("lg") {
     width: 213px;
@@ -452,6 +453,7 @@ body {
 .fv__img-cat-bk {
   width: 62px;
   position: relative;
+  top: 8px;
 
   @include mq("lg") {
     width: 170px;
@@ -463,7 +465,7 @@ body {
 .fv__img-cat-br {
   width: 98px;
   position: relative;
-  top: -10px;
+  top: -6px;
   margin-right: 9px;
 
   @include mq("lg") {
@@ -478,7 +480,7 @@ body {
 .about {
   position: relative;
   overflow: hidden;
-  margin-top: 32px;
+  margin-top: 25px;
 }
 
 .about__background {
@@ -508,18 +510,18 @@ body {
 
 .about__background-image__hill {
   width: 138px;
-  bottom: 61.2px;
+  bottom: -53px;
 }
 
 .about__background-image__goods1 {
   width: 48px;
-  top: 700px;
+  top: 720px;
   right: 20px;
 }
 
 .about__background-image__goods2 {
   width: 133px;
-  top: 742px;
+  top: 763px;
   right: 57px;
 }
 
@@ -537,15 +539,17 @@ body {
 }
 
 .about__image-left {
-  width: 80px;
+  width: 90px;
   position: absolute;
-  left: 53px;
+  left: 32px;
+  top: 30px;
 }
 
 .about__image-right {
-  width: 80px;
+  width: 90px;
   position: absolute;
-  right: 40px;
+  right: 20px;
+  top: 30px;
 }
 
 .about__lead {
@@ -569,6 +573,10 @@ body {
 
 }
 
+.about-text-l {
+  margin-bottom: 3em;
+}
+
 .about-text_bold {
   font-size: 14px;
   font-weight: 700;
@@ -587,11 +595,20 @@ body {
 }
 
 .about__bottom {
-
+  margin-left: -12px;
+  margin-right: -12px;
+  display: flex;
+  justify-content: center;
 }
 
 .about__bottom__decorative-text {
   margin-top: 139.67px;
+  position: relative;
+  top: 16px;
+
+  img {
+
+  }
 }
 
 
