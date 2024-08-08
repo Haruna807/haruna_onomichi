@@ -20,23 +20,25 @@ $(document).ready(function() {
   });
 });
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  loop: true,
+// スワイパー
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+// const swiper = new Swiper('.swiper', {
+//   autoplay: {
+//     delay: 0,
+//   },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+//   loop: true,
+//   speed: 3500,
+//   slidesPerView: 3.5,
+//   centeredSlides: true,
+//   preventInteractionOnTransition: true,
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+//   pagination: {
+//     el: '.swiper-pagination',
+//     type: 'progressbar',
+//   },
+// });
+
+
+
+

@@ -490,6 +490,7 @@ body {
 .about__background-image__footprint {
   width: 54px;
   right: 0;
+  top: -10px;
 }
 
 .about__background-image__pattern {
@@ -510,7 +511,7 @@ body {
 
 .about__background-image__hill {
   width: 138px;
-  bottom: -53px;
+  bottom: -37px;
 }
 
 .about__background-image__goods1 {
@@ -564,8 +565,16 @@ body {
   text-align: center;
   margin-top: 24px;
 
-  .about-text:not(:last-child) {
-    margin-bottom: 1.5em;
+  // .about-text:not(:last-child) {
+  //   margin-bottom: 1.6em;
+  // }
+
+  .about-text:not(.about-text-l) {
+    margin-bottom: 1.6em;
+  }
+
+  .about-text-l {
+    margin-bottom: 2.6em;
   }
 }
 
@@ -574,7 +583,7 @@ body {
 }
 
 .about-text-l {
-  margin-bottom: 3em;
+
 }
 
 .about-text_bold {
@@ -604,11 +613,35 @@ body {
 .about__bottom__decorative-text {
   margin-top: 139.67px;
   position: relative;
-  top: 16px;
 
   img {
 
   }
+}
+
+// スワイパー
+
+.swiper{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper{
+  transition-timing-function: linear;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.swiper-slide img{
+  display: block;
+  width: auto;
+  height: 100px;
 }
 
 
