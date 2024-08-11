@@ -614,6 +614,7 @@ body {
     bottom: 55px;
     left: auto;
     width: 427px;
+    bottom: -76px;
   }
 }
 
@@ -810,7 +811,6 @@ body {
 .about__bottom {
   margin-left: -12px;
   margin-right: -12px;
-  display: flex;
   justify-content: center;
 
   @include mq("lg") {
@@ -821,6 +821,8 @@ body {
 .about__bottom__decorative-text {
   margin-top: 139.67px;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
 
   @include mq("lg") {
     width: 770px;
@@ -848,12 +850,13 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0;
+  width: 200px;
+  margin-right: 20px;
 }
 
 .swiper-slide img{
   display: block;
-  width: auto;
-  height: 100px;
+  max-width: 100%;
 }
 
 

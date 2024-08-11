@@ -639,6 +639,7 @@ body {
     bottom: 55px;
     left: auto;
     width: 427px;
+    bottom: -76px;
   }
 }
 
@@ -831,9 +832,6 @@ body {
 .about__bottom {
   margin-left: -12px;
   margin-right: -12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -847,6 +845,8 @@ body {
 .about__bottom__decorative-text {
   margin-top: 139.67px;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media screen and (min-width:900px) {
   .about__bottom__decorative-text {
@@ -875,10 +875,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
+  width: 200px;
+  margin-right: 20px;
 }
 
 .swiper-slide img {
   display: block;
-  width: auto;
-  height: 100px;
+  max-width: 100%;
 }

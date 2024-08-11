@@ -29,9 +29,10 @@ $(document).ready(function() {
 
 //   loop: true,
 //   speed: 3500,
-//   slidesPerView: 3.5,
+//   slidesPerView: 4.5,
 //   centeredSlides: true,
 //   preventInteractionOnTransition: true,
+//   spaceBetween: 1,
 
 //   pagination: {
 //     el: '.swiper-pagination',
