@@ -568,6 +568,13 @@ body {
     width: 70px;
   }
 }
+@media screen and (min-width:1200px) {
+  .about__background-image__footprint {
+    top: -80px;
+    left: calc(50% + 490px);
+    width: 100px;
+  }
+}
 
 .about__background-image__pattern {
   display: none;
@@ -604,6 +611,11 @@ body {
     border-radius: 40px;
   }
 }
+@media screen and (min-width:1200px) {
+  .about__background-image__right {
+    left: calc(50% + 560px);
+  }
+}
 
 .about__background-image__left {
   width: 200px;
@@ -623,6 +635,11 @@ body {
     border-radius: 40px;
   }
 }
+@media screen and (min-width:1200px) {
+  .about__background-image__left {
+    right: calc(50% + 614px);
+  }
+}
 
 .about__background-image__hill {
   width: 138px;
@@ -640,6 +657,28 @@ body {
     left: auto;
     width: 427px;
     bottom: -76px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .about__background-image__hill {
+    right: calc(50% + 432px);
+  }
+}
+
+.about__background-image__wave {
+  display: none;
+}
+@media screen and (min-width:900px) {
+  .about__background-image__wave {
+    display: block;
+    bottom: 404px;
+    width: 874px;
+    left: calc(50% + 200px);
+  }
+}
+@media screen and (min-width:1200px) {
+  .about__background-image__wave {
+    left: calc(50% + 448px);
   }
 }
 
@@ -662,6 +701,11 @@ body {
     height: 101px;
   }
 }
+@media screen and (min-width:1200px) {
+  .about__background-image__goods1 {
+    left: calc(50% + 505px);
+  }
+}
 
 .about__background-image__goods2 {
   width: 133px;
@@ -679,6 +723,11 @@ body {
     width: 308px;
     left: calc(50% + 120px);
     top: 800px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .about__background-image__goods2 {
+    left: calc(50% + 374px);
   }
 }
 
@@ -699,6 +748,11 @@ body {
     max-width: 640px;
     padding-right: 30px;
     padding-left: 30px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .about__inner {
+    max-width: 908px;
   }
 }
 
@@ -802,6 +856,11 @@ body {
 .about__text .about-text:not(.about-text-l) {
   margin-bottom: 1.6em;
 }
+@media screen and (min-width:900px) {
+  .about__text .about-text:not(.about-text-l) {
+    margin-bottom: 1.7em;
+  }
+}
 .about__text .about-text-l {
   margin-bottom: 2.6em;
 }
@@ -853,10 +912,24 @@ body {
     width: 770px;
   }
 }
+@media screen and (min-width:1200px) {
+  .about__bottom__decorative-text {
+    width: 891px;
+  }
+}
+.about__bottom__decorative-text img {
+  width: 100%;
+}
+
 .swiper {
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width:900px) {
+  .swiper {
+    margin-top: -15px;
+  }
 }
 
 .swiper-wrapper {
