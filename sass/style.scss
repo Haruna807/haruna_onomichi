@@ -113,6 +113,24 @@ body {
   
 }
 
+.button-small {
+  height: 32px;
+  padding: calc(6px - 4px) calc(24px - 2px) calc(8px - 4px) calc(24px - 2px);
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+
+  @include mq("lg") {
+    height: 40px;
+    padding-inline: 20px;
+    padding-top: 4px;
+    padding-bottom: 31.5px;
+    font-size: 17px;
+  }
+}
+
 
 
 // heading
@@ -457,11 +475,20 @@ body {
   }
 }
 
+.fv__button {
+  position: relative;
+  top: -189.5px;
+
+  @include mq("lg") {
+    top: -391.5px;
+  }
+}
+
 .fv__content {
   display: flex;
   flex-direction: row;
   gap: 142px;
-  margin-top: -130px;
+  margin-top: -161px;
 
   @include mq("sm") {
     justify-content: center;
@@ -472,7 +499,7 @@ body {
     margin-top: 0;
     justify-content: center;
     gap: 403px;
-    margin-top: -505px;
+    margin-top: -547px;
   }
 }
 
@@ -566,6 +593,7 @@ body {
     width: 250px;
     height: 250px;
     right: calc(50% + 280px);
+    top: -20px;
   }
 
   @include mq("xl") {
@@ -692,10 +720,12 @@ body {
   }
 
   @include mq("xl") {
-    width: 400px;
     left: calc(50% + 374px);
-    top: 750px;
+    top: 757px;
+  }
 
+  img {
+    width: 100%;
   }
 }
 
