@@ -122,7 +122,7 @@ body {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
 }
 
 .heading__icon {
@@ -247,7 +247,7 @@ body {
 
   @include mq("xl") {
     flex-direction: row;
-    gap: 12px;
+    gap: 11px;
   }
 }
 
@@ -633,6 +633,7 @@ body {
 
   @include mq("xl") {
     right: calc(50% + 432px);
+    bottom: -44px;
   }
 }
 
@@ -648,6 +649,7 @@ body {
 
   @include mq("xl") {
     left: calc(50% + 448px);
+    top: 605px;
   }
 }
 
@@ -676,7 +678,7 @@ body {
 .about__background-image__goods2 {
   width: 133px;
   top: 763px;
-  left: calc(50% + 2px);
+  left: calc(50% + -3px);
 
   @include mq("sm") {
     width: 200px;
@@ -690,7 +692,10 @@ body {
   }
 
   @include mq("xl") {
+    width: 400px;
     left: calc(50% + 374px);
+    top: 750px;
+
   }
 }
 
@@ -762,11 +767,11 @@ body {
 .about__image-left {
   width: 90px;
   position: absolute;
-  right: calc(50% + 59.65px);
+  right: calc(50% + 45px);
   top: 30px;
 
   @include mq("lg") {
-    width: 134px;
+    width: 146px;
     top: 40px;
     right: calc(50% + 192px);
   }
@@ -775,12 +780,12 @@ body {
 .about__image-right {
   width: 90px;
   position: absolute;
-  left:  calc(50% + 46.43px);
+  left:  calc(50% + 58px);
   top: 30px;
 
   @include mq("lg") {
-    top: 40px;
-    width: 134px;
+    top: 47px;
+    width: 148px;
     left:  calc(50% + 192px);
   }
 }
@@ -811,7 +816,7 @@ body {
   }
 
   .about-text:not(.about-text-l) {
-    margin-bottom: 1.6em;
+    margin-bottom: 1.5em;
 
     @include mq("lg") {
       margin-bottom: 1.7em;
@@ -821,6 +826,10 @@ body {
 
   .about-text-l {
     margin-bottom: 2.6em;
+
+    @include mq("lg") {
+      margin-bottom: 2.8em;
+    }
   }
 }
 
@@ -841,15 +850,18 @@ body {
 
   @include mq("lg") {
     font-size: 20px;
+    margin-top: 44px;
+    padding-bottom: 11px;
   }
 }
 
 .about__button {
-  margin-top: 30px;
+  margin-top: 32px;
   text-align: center;
 
   @include mq("md") {
     font-size: 20px;
+    margin-top: 45px;
   }
 
 }
@@ -866,6 +878,10 @@ body {
   @include mq("lg") {
     margin-top: 154px;
   }
+
+  @include mq("xl") {
+    margin-top: 167px;
+  }
 }
 
 .about__bottom__decorative-text {
@@ -873,6 +889,7 @@ body {
   position: relative;
   margin-right: auto;
   margin-left: auto;
+  width: 358px;
 
   @include mq("lg") {
     width: 770px;
@@ -880,6 +897,7 @@ body {
 
   @include mq("xl") {
     width: 891px;
+    left: -3px;
   }
 
   img {
@@ -893,9 +911,10 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
+  margin-top: -3px;
 
   @include mq("lg") {
-    margin-top: -15px;
+    margin-top: -7px;
   }
 }
 
@@ -908,13 +927,19 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0;
-  width: 200px;
-  margin-right: 20px;
+  width: 100px;
+  margin-right: 10px;
+
+  @include mq("lg") {
+    width: 200px;
+    margin-right: 20px;
+  }
 }
 
 .swiper-slide img{
   display: block;
-  max-width: 100%;
+  min-width: 100%;
+  
 }
 
 
