@@ -1267,6 +1267,11 @@ body {
 
 .link-text {
   text-decoration: underline;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.link-text:hover {
+  color: #67B0C7;
 }
 
 .text-bold {

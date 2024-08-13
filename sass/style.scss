@@ -1198,6 +1198,11 @@ body {
 
 .link-text {
   text-decoration: underline;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $sub-color-DBlue;
+  }
 }
 
 .text-bold {
