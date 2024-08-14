@@ -55,6 +55,10 @@ body {
   }
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .wrapper {
   overflow: hidden;
 }
@@ -1311,6 +1315,231 @@ body {
     margin-top: 33px;
   }
 }
+
+// prizes
+
+.prizes {
+  margin-top: 37px;
+
+}
+
+.prizes__inner {
+
+}
+
+.prizes__contents {
+  padding-top: 20px;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 238px;
+    height: 83px;
+    background: url('../img/sp/deco_prizes_sp.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.background-color {
+  position: absolute;
+  top: 83px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $mono-color-White;
+  border-radius: 24px;
+  z-index: -2;
+}
+
+
+.prizes__text {
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.prizes__cards {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 39px;
+  justify-content: space-between;
+}
+
+.prizes__card {
+  flex: 1 1 calc(50% - 15px);
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  width: calc(50% - 7.5px);
+}
+
+.last-card {
+  flex: 0 1 100%;
+  display: flex;
+  justify-content: center;
+
+  .prizes__card__contents {
+    width: 160px;
+
+    .prizes__card__icon {
+      right: 87px;
+    }
+  }
+}
+
+.prizes__card__number {
+  width: 48px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  top: -24px;
+}
+
+.prizes__card__contents {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $mono-color-Gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.prizes__card__image {
+
+}
+
+.prizes__card__lead {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+
+.prizes__card__icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 14px;
+  padding-top: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background-color: $sub-color-DBlue;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    z-index: 5;
+    border-radius: 0 0 8px 0;
+  }
+
+  img {
+    width: 11.52px;
+    height: 11.52px;
+    z-index: 6;
+  }
+}
+
+.prizes__button {
+  margin-top: 18px;
+}
+
+
+// モーダル
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* モーダルが表示された時 */
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding-bottom: 56px;
+  border-radius: 24px;
+  width: 336px;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close__button {
+  padding-bottom: 4px;
+  margin-top: 16px;
+  height: 40px;
+}
+
+#modal-image {
+  width: 100%;
+  height: 210px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 39px;
+}
+
+#modal-description {
+  line-height: 1.6;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+
 
 
 
