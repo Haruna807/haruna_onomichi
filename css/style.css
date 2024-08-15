@@ -1400,6 +1400,18 @@ body.no-scroll {
 .prizes {
   margin-top: 37px;
 }
+@media screen and (min-width:900px) {
+  .prizes {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (min-width:900px) {
+  .prizes__inner {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
 
 .prizes__contents {
   padding-top: 20px;
@@ -1407,6 +1419,14 @@ body.no-scroll {
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 30px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width:900px) {
+  .prizes__contents {
+    max-width: 1084px;
+  }
 }
 .prizes__contents::before {
   content: "";
@@ -1422,6 +1442,32 @@ body.no-scroll {
           transform: translateX(-50%);
   z-index: -1;
 }
+@media screen and (min-width:900px) {
+  .prizes__contents::before {
+    background: url("../img/deco_prizes_pc.png") no-repeat;
+    height: 148px;
+    width: 372px;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.prizes__triangle-left {
+  position: absolute;
+  width: 225px;
+  top: 0;
+  right: calc(50% + 120px);
+}
+
+.prizes__triangle-right {
+  position: absolute;
+  width: 225px;
+  top: 0;
+  left: calc(50% + 120px);
+}
 
 .background-color {
   position: absolute;
@@ -1433,6 +1479,11 @@ body.no-scroll {
   border-radius: 24px;
   z-index: -2;
 }
+@media screen and (min-width:900px) {
+  .background-color {
+    top: 148px;
+  }
+}
 
 .prizes__text {
   margin-top: 16px;
@@ -1440,6 +1491,12 @@ body.no-scroll {
   font-weight: 400;
   line-height: 1.6;
   text-align: center;
+}
+@media screen and (min-width:900px) {
+  .prizes__text {
+    font-size: 16px;
+    margin-top: 40px;
+  }
 }
 
 .prizes__cards {
@@ -1453,38 +1510,27 @@ body.no-scroll {
      -moz-column-gap: 15px;
           column-gap: 15px;
   row-gap: 39px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width:900px) {
+  .prizes__cards {
+    margin-top: 72px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .prizes__cards {
+    margin-top: 82px;
+  }
 }
 
 .prizes__card {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 calc(50% - 15px);
-          flex: 1 1 calc(50% - 15px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
   position: relative;
   width: calc(50% - 7.5px);
-}
-
-.last-card {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.last-card .prizes__card__contents {
-  width: 160px;
-}
-.last-card .prizes__card__contents .prizes__card__icon {
-  right: 87px;
 }
 
 .prizes__card__number {
@@ -1496,10 +1542,23 @@ body.no-scroll {
   z-index: 3;
   top: -24px;
 }
+@media screen and (min-width:900px) {
+  .prizes__card__number {
+    width: 80px;
+    top: -40px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .prizes__card__number {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+}
 
 .prizes__card__contents {
+  position: relative;
   border-radius: 8px;
-  overflow: hidden;
   background-color: #F5F5F5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1515,6 +1574,23 @@ body.no-scroll {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width:1200px) {
+  .prizes__card__contents {
+    border-radius: 24px;
+  }
+}
+
+.prizes__card__image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.prizes__card__image img {
+  width: 100%;
+  height: auto;
 }
 
 .prizes__card__lead {
@@ -1531,7 +1607,11 @@ body.no-scroll {
   text-align: center;
   margin: 0;
 }
-
+@media screen and (min-width:600px) {
+  .prizes__card__lead {
+    font-size: 14px;
+  }
+}
 .prizes__card__icon {
   position: absolute;
   bottom: 0;
@@ -1571,6 +1651,7 @@ body.no-scroll {
 
 .prizes__button {
   margin-top: 18px;
+  text-align: center;
 }
 
 .modal {
