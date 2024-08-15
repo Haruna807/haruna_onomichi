@@ -1427,6 +1427,11 @@ body.no-scroll {
   justify-content: center;
 
   @include mq("lg") {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 60px;
+    grid-column-gap: 15px;
     margin-top: 72px;
   }
 
@@ -1440,6 +1445,10 @@ body.no-scroll {
   text-align: center;
   position: relative;
   width: calc(50% - 7.5px);
+
+  @include mq("lg") {
+    width: 100%;
+  }
 }
 
 .prizes__card__number {
@@ -1504,7 +1513,8 @@ body.no-scroll {
   }
 
   @include mq("lg") {
-    
+    min-height: 120px;
+    font-size: 20px;
   }
 }
 
@@ -1614,7 +1624,29 @@ body.no-scroll {
 
 
 
-
+@include mq("lg") {
+  
+  .prizes__card:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+  
+  .prizes__card:nth-child(2) {
+    grid-area: 1 / 4 / 2 / 7;
+  }
+  
+  /* 下の行のカード */
+  .prizes__card:nth-child(3) {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  
+  .prizes__card:nth-child(4) {
+    grid-area: 2 / 3 / 3 / 5;
+  }
+  
+  .prizes__card:nth-child(5) {
+    grid-area: 2 / 5 / 3 / 7;
+  }
+}
 
 
 
