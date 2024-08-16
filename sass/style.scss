@@ -1780,33 +1780,182 @@ body.no-scroll {
 }
 
 
+// spots
 
+.spots {
+  position: relative;
+  margin-top: 215px;
+  padding-bottom: 45px;
 
-@include mq("lg") {
-  
-  .prizes__card:nth-child(1) {
-    grid-area: 1 / 1 / 2 / 4;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../img/spots_bg_wave_1.png);
+    background-repeat: repeat-x;
+    background-size: 96px auto;
+    background-position: top left;
+    z-index: -1;
   }
-  
-  .prizes__card:nth-child(2) {
-    grid-area: 1 / 4 / 2 / 7;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../img/spots_bg_wave_2.png);
+    background-repeat: repeat-x;
+    background-size: 96px auto;
+    background-position: bottom left;
+    z-index: -1;
   }
-  
-  /* 下の行のカード */
-  .prizes__card:nth-child(3) {
-    grid-area: 2 / 1 / 3 / 3;
-  }
-  
-  .prizes__card:nth-child(4) {
-    grid-area: 2 / 3 / 3 / 5;
-  }
-  
-  .prizes__card:nth-child(5) {
-    grid-area: 2 / 5 / 3 / 7;
+
+}
+
+.spots__inner {
+
+}
+
+.spots__background-image__footprint {
+
+}
+
+.spots__contents {
+  background: $sub-color-DBlue;
+  padding-bottom: 16px;
+}
+
+.spots-heading {
+  text-align: center;
+}
+
+.spots__heading {
+  color: $text-color-wh;
+  font-family: $font-family-ja-2;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
+  position: relative;
+  display: inline-block;
+  padding-left: 36px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background-image: url('../img/spots_heading_icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 
+.spots__heading__en {
+  width: 255px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+.spots__text {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.spots-text {
+  font-size: 11.444px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $text-color-wh;
+}
+
+.spots__button {
+  margin-top: 24px;
+}
+
+.button {
+
+}
+
+// spotsのスライダー
+
+.spots__slider {
+  margin-top: 24px;
+}
+
+.swiper-spots {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  width: calc(100% - 132px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  background: $mono-color-White;
+  padding-bottom: 30px;
+  position: relative;
+  justify-content: flex-start;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 8px;
+}
+
+.spots__slide-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.spots__slide-title {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.spots__slide-text {
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-inline: 24px;
+}
+
+.swiper-button-next {
+
+}
+
+.swiper-button-prev {
+
+}
 
 
 

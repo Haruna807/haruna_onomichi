@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 // スワイパー
 
-// const swiper = new Swiper('.swiper', {
+// const swiper1 = new Swiper('.about-swiper .swiper', {
 //   autoplay: {
 //     delay: 0,
 //   },
@@ -66,6 +66,22 @@ $(document).ready(function() {
     $('body').removeClass('no-scroll');
   });
   
+});
+
+// spotsのスワイパー
+
+const swiperSpots = new Swiper('.swiper-spots', {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next', // 次のスライドへ移動するボタンのセレクタ
+    prevEl: '.swiper-button-prev', // 前のスライドへ移動するボタンのセレクタ
+  },
 });
 
 
