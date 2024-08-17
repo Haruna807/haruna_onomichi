@@ -82,6 +82,11 @@ const swiperSpots = new Swiper('.swiper-spots', {
     nextEl: '.swiper-button-next', // 次のスライドへ移動するボタンのセレクタ
     prevEl: '.swiper-button-prev', // 前のスライドへ移動するボタンのセレクタ
   },
+  breakpoints: {
+    900: { // lgサイズ以上の設定
+      centeredSlides: false, // 左端から開始
+    },
+  },
 });
 
 
