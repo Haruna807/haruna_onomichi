@@ -54,18 +54,18 @@ $(document).ready(function() {
     $('#modal-image').attr('src', imageSrc);
     $('#modal-title').text(title);
     $('#modal-description').html(description); // HTMLとして扱う
-    
+
     // モーダルを表示
     $('#modal').addClass('show');
     $('body').addClass('no-scroll');
   });
-  
+
   // 「閉じる」ボタンをクリックしてモーダルを閉じる
   $('#modal-close-btn').on('click', function() {
     $('#modal').removeClass('show');
     $('body').removeClass('no-scroll');
   });
-  
+
 });
 
 // spotsのスワイパー
