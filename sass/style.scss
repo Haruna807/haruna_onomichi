@@ -20,7 +20,8 @@ $text-color-wh: #FFFFFF;
 
 $font-family-ja-1: "Noto Sans JP", sans-serif;
 $font-family-ja-2: "Kiwi Maru", serif;
-$font-family-en: "Courgette", "Josefin Sans", cursive, sans-serif;
+$font-family-en-1: "Courgette", cursive;
+$font-family-en-2: "Josefin Sans", sans-serif;
 
 $font-size-base-sp: 12px;
 $font-size-base-pc: 16px;
@@ -64,6 +65,17 @@ body.no-scroll {
 }
 
 .inner {
+  max-width: 640px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq("lg") {
+    max-width: 1084px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 
 .hidden-pc {
@@ -156,7 +168,7 @@ body.no-scroll {
 }
 
 .heading__en {
-  font-family: $font-family-en;
+  font-family: $font-family-en-1;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
@@ -2109,6 +2121,210 @@ body.no-scroll {
 .swiper-button-prev {
   background-image: url(../img/slider__button-left.png);
 }
+
+
+// Q&A
+
+.qa {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+
+  @include mq("lg") {
+    margin-top: 120px;
+  }
+
+}
+
+.qa__inner {
+}
+
+
+.qa_boxes {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include mq("lg") {
+    margin-top: 40px;
+    gap: 24px;
+  }
+
+}
+
+.qa_box {
+  border-radius: 12px;
+  border: 2px solid $mono-color-Blown;
+  background: $mono-color-White;
+  overflow: hidden;
+
+  @include mq("lg") {
+    border-radius: 16px;
+  }
+
+  &.is-open {
+    .qa-box_head {
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+
+    .qa-box_head-btn {
+      &::after {
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+
+    .qa-box_body{
+      display: block;
+    }
+  }
+}
+
+.qa-box {
+  
+}
+
+.is-open {
+
+}
+
+.qa-box_head {
+  padding: calc(12px - 2px) calc(16px - 2px) calc(12px - 2px) 16px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  align-items: center;
+
+  @include mq("lg") {
+    padding: calc(24px - 2px) calc(24px - 2px) calc(24px - 2px) 24px;
+    gap: 16px;
+  }
+}
+
+.js-accordion {
+
+}
+
+.qa-box_head-icon {
+  color: $main-color;
+  font-family: $font-family-en-2;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  
+  @include mq("lg") {
+    font-size: 32px;
+  }
+}
+
+.qa-box_head-text {
+  color: $text-color-br;
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+  flex-grow: 1;
+
+  @include mq("lg") {
+    font-size: 20px;
+  }
+}
+
+.qa-box_head-btn {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-color: $main-color;
+  border-radius: 50%;
+
+  @include mq("lg") {
+    width: 32px;
+    height: 32px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 1.5px;
+    border-radius: 50px;
+    background: $mono-color-White;
+    display: block;
+
+    @include mq("lg") {
+      width: 18.6px;
+      height: 2.6px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.5px;
+    height: 10px;
+    border-radius: 50px;
+    background: $mono-color-White;
+    display: block;
+    transition: 0.3s;
+    will-change: transform;
+
+    @include mq("lg") {
+      width: 2.6px;
+      height: 18.6px;
+    }
+  }
+}
+
+.qa-box_body {
+  padding: 16px calc(16px - 2px) calc(16px - 2px) calc(16px - 2px);
+  display: none;
+  background: $mono-color-Gray;
+
+  @include mq("lg") {
+    padding: 24px calc(24px - 2px) calc(24px - 2px) calc(24px - 2px);
+  }
+}
+
+.qa-box_a {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.qa-box_a-icon {
+  color: $main-color;
+  font-family: $font-family-en-2;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+
+  @include mq("lg") {
+    font-size: 32px;
+  }
+}
+
+.qa-box_a-text {
+  color: $text-color-br;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  @include mq("lg") {
+    font-size: 16px;
+  }
+}
+
 
 
 

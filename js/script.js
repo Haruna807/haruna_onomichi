@@ -90,5 +90,21 @@ const swiperSpots = new Swiper('.swiper-spots', {
 });
 
 
+// Q&A
+
+jQuery(".js-accordion").on("click", function(e) {
+  e.preventDefault();
+
+  if (jQuery(this).parent().hasClass("is-open")){
+    jQuery(this).parent().removeClass("is-open");
+    jQuery(this).next().slideUp();
+  } else {
+    jQuery(this).parent().addClass("is-open");
+    jQuery(this).next().slideDown();
+  }
+});
+
+
+
 
 
