@@ -70,6 +70,7 @@ body.no-scroll {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
+  width: 100%;
 
   @include mq("lg") {
     max-width: 1084px;
@@ -1167,7 +1168,9 @@ body.no-scroll {
 }
 
 .how-to-entry__step:nth-of-type(2) {
-
+  @include mq("lg") {
+    margin-top: 69px;
+  }
 }
 
 .step-image {
@@ -1326,6 +1329,10 @@ body.no-scroll {
 
   @include mq("lg") {
     margin-top: 33px;
+  }
+
+  @include mq("xl") {
+    margin-top: 47px;
   }
 }
 
@@ -1801,7 +1808,7 @@ body.no-scroll {
   padding-bottom: 45px;
 
   @include mq("lg") {
-    padding-bottom: 120px;
+    padding-bottom: 115px;
     padding-top: 168px;
 
   }
@@ -1879,6 +1886,7 @@ body.no-scroll {
     display: flex;
     gap: 32px;
     padding-left: max(30px, 50% - 512px);
+    padding-top: 24px;
   }
 
   @include mq("xl") {
@@ -2141,10 +2149,10 @@ body.no-scroll {
 
 
 .qa_boxes {
-  margin-top: 24px;
+  margin-top: 23px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 11px;
 
   @include mq("lg") {
     margin-top: 40px;
@@ -2191,7 +2199,7 @@ body.no-scroll {
 }
 
 .qa-box_head {
-  padding: calc(12px - 2px) calc(16px - 2px) calc(12px - 2px) 16px;
+  padding: calc(12px - 2px) calc(16px - 2px) calc(12px - 2px) 15px;
   position: relative;
   display: flex;
   width: 100%;
@@ -2247,6 +2255,11 @@ body.no-scroll {
     height: 32px;
   }
 
+  @include mq("xl") {
+    width: 44px;
+    height: 44px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -2276,7 +2289,7 @@ body.no-scroll {
     border-radius: 50px;
     background: $mono-color-White;
     display: block;
-    transition: 0.3s;
+    transition: 0.2s ease;
     will-change: transform;
 
     @include mq("lg") {
@@ -2290,10 +2303,12 @@ body.no-scroll {
   padding: 16px calc(16px - 2px) calc(16px - 2px) calc(16px - 2px);
   display: none;
   background: $mono-color-Gray;
+  overflow: hidden;
 
   @include mq("lg") {
     padding: 24px calc(24px - 2px) calc(24px - 2px) calc(24px - 2px);
   }
+
 }
 
 .qa-box_a {

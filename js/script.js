@@ -92,18 +92,36 @@ const swiperSpots = new Swiper('.swiper-spots', {
 
 // Q&A
 
-jQuery(".js-accordion").on("click", function(e) {
-  e.preventDefault();
+// jQuery(".js-accordion").on("click", function(e) {
+//   e.preventDefault();
 
-  if (jQuery(this).parent().hasClass("is-open")){
-    jQuery(this).parent().removeClass("is-open");
-    jQuery(this).next().slideUp();
-  } else {
-    jQuery(this).parent().addClass("is-open");
-    jQuery(this).next().slideDown();
-  }
+//   if (jQuery(this).parent().hasClass("is-open")){
+//     jQuery(this).parent().removeClass("is-open");
+//     jQuery(this).next().slideUp();
+//   } else {
+//     jQuery(this).parent().addClass("is-open");
+//     jQuery(this).next().slideDown();
+//   };
+// });
+
+jQuery(document).ready(function($) {
+  $(".js-accordion").on("click", function(e) {
+    e.preventDefault();
+
+    var $parent = $(this).parent();
+    var $body = $(this).next(".qa-box_body");
+
+    // 現在のアコーディオンのボディをトグル
+    $body.slideToggle(300, function() {
+      // アニメーション完了後にクラスをトグル
+      if ($body.is(":visible")) {
+        $parent.addClass("is-open");
+      } else {
+        $parent.removeClass("is-open");
+      }
+    });
+  });
 });
-
 
 
 

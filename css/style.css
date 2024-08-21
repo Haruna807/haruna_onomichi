@@ -27,6 +27,7 @@ body.no-scroll {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
+  width: 100%;
 }
 @media screen and (min-width:900px) {
   .inner {
@@ -1241,6 +1242,12 @@ body.no-scroll {
   }
 }
 
+@media screen and (min-width:900px) {
+  .how-to-entry__step:nth-of-type(2) {
+    margin-top: 69px;
+  }
+}
+
 .step-image {
   width: 196px;
   margin: 0 auto;
@@ -1412,6 +1419,11 @@ body.no-scroll {
 @media screen and (min-width:900px) {
   .how-to-entry__button {
     margin-top: 33px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .how-to-entry__button {
+    margin-top: 47px;
   }
 }
 
@@ -1942,7 +1954,7 @@ body.no-scroll {
 }
 @media screen and (min-width:900px) {
   .spots {
-    padding-bottom: 120px;
+    padding-bottom: 115px;
     padding-top: 168px;
   }
 }
@@ -2017,6 +2029,7 @@ body.no-scroll {
     display: flex;
     gap: 32px;
     padding-left: max(30px, 50% - 512px);
+    padding-top: 24px;
   }
 }
 .spots-heading {
@@ -2307,7 +2320,7 @@ body.no-scroll {
 }
 
 .qa_boxes {
-  margin-top: 24px;
+  margin-top: 23px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2315,7 +2328,7 @@ body.no-scroll {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 12px;
+  gap: 11px;
 }
 @media screen and (min-width:900px) {
   .qa_boxes {
@@ -2348,7 +2361,7 @@ body.no-scroll {
 }
 
 .qa-box_head {
-  padding: 10px 14px 10px 16px;
+  padding: 10px 14px 10px 15px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2410,6 +2423,12 @@ body.no-scroll {
     height: 32px;
   }
 }
+@media screen and (min-width:1200px) {
+  .qa-box_head-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
 .qa-box_head-btn::before {
   content: "";
   position: absolute;
@@ -2441,8 +2460,8 @@ body.no-scroll {
   border-radius: 50px;
   background: #FFFFFF;
   display: block;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
   will-change: transform;
 }
 @media screen and (min-width:900px) {
@@ -2456,6 +2475,7 @@ body.no-scroll {
   padding: 16px 14px 14px 14px;
   display: none;
   background: #F5F5F5;
+  overflow: hidden;
 }
 @media screen and (min-width:900px) {
   .qa-box_body {
