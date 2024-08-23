@@ -2340,6 +2340,73 @@ body.no-scroll {
   }
 }
 
+// Entry Requirements 参加要項
+
+.entry-requirements {
+  margin-top: 30px;
+}
+
+.entry-requirements__inner {
+
+}
+
+.entry-requirements__content {
+  border: 8px solid $mono-color-White;
+  background: rgba(255, 255, 255, 0.50);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: calc(24px - 8px);
+  padding-right: calc(23px - 8px);
+}
+
+.entry__heading {
+
+}
+
+.entry-requirements__info {
+  margin-top: 24px;
+}
+
+.entry-requirements__info__item {
+
+}
+
+.entry-requirements__info__item + .entry-requirements__info__item {
+  border-top: 1px solid $mono-color-DGray;
+}
+
+.entry-requirements__info__title {
+  color: $text-color-br;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $main-color;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.entry-requirements__info__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+
+
+
+
 
 
 
