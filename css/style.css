@@ -2520,6 +2520,7 @@ body.no-scroll {
 
 .entry-requirements {
   margin-top: 30px;
+  margin-bottom: 32px;
 }
 
 .entry-requirements__content {
@@ -2537,6 +2538,7 @@ body.no-scroll {
 
 .entry-requirements__info__item + .entry-requirements__info__item {
   border-top: 1px solid #CCCCCC;
+  padding-top: 12px;
 }
 
 .entry-requirements__info__title {
@@ -2546,6 +2548,11 @@ body.no-scroll {
   line-height: 1.6;
   position: relative;
   padding-left: 16px;
+}
+@media screen and (min-width:600px) {
+  .entry-requirements__info__title {
+    font-size: 16px;
+  }
 }
 .entry-requirements__info__title::before {
   content: "";
@@ -2565,4 +2572,24 @@ body.no-scroll {
   font-weight: 400;
   line-height: 1.6;
   margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.entry-requirements__info__text ul {
+  list-style: none;
+  padding-left: 0;
+}
+.entry-requirements__info__text ul li {
+  position: relative;
+  padding-left: 17.5px;
+}
+.entry-requirements__info__text ul li::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #4A3636;
 }

@@ -2344,6 +2344,7 @@ body.no-scroll {
 
 .entry-requirements {
   margin-top: 30px;
+  margin-bottom: 32px;
 }
 
 .entry-requirements__inner {
@@ -2373,6 +2374,7 @@ body.no-scroll {
 
 .entry-requirements__info__item + .entry-requirements__info__item {
   border-top: 1px solid $mono-color-DGray;
+  padding-top: 12px
 }
 
 .entry-requirements__info__title {
@@ -2382,6 +2384,10 @@ body.no-scroll {
   line-height: 1.6;
   position: relative;
   padding-left: 16px;
+
+  @include mq("sm") {
+    font-size: 16px;
+  }
 
   &::before {
     content: "";
@@ -2401,10 +2407,29 @@ body.no-scroll {
   font-weight: 400;
   line-height: 1.6;
   margin-top: 8px;
+  margin-bottom: 16px;
 }
 
+.entry-requirements__info__text ul {
+  list-style: none;
+  padding-left: 0;
 
+  li {
+    position: relative;
+    padding-left: 17.5px;
 
+    &::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $text-color-br;
+    }
+  }
+}
 
 
 
