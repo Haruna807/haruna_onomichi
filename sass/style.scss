@@ -105,6 +105,7 @@ body.no-scroll {
   border: 2px solid $mono-color-Blown;
   background: $mono-color-White;
   box-shadow: 0px 4px 0px 0px $mono-color-Blown;
+  color: $text-color-br;
 
 
   @include mq("lg") {

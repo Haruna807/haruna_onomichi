@@ -700,7 +700,141 @@
       <img src="./img/sp/entry_bg_img-sp.png" alt="">
     </picture>
   </div>
+</section>
 
+<section class="contact">
+  <div class="contact__inner inner">
+    <div class="heading contact__heading">
+      <div class="heading__icon">
+        <img src="./img/contact-icon.png" alt="">
+      </div>
+      <div class="heading__en">Contact</div>
+      <h2 class="heading__ja">お問い合わせ</h2>
+    </div>
+    <form action="" class="contact__form">
+      <p class="contact__text">
+        本キャンペーンに関するお問い合わせは<br>以下のフォームからお願いします。
+      </p>
+
+      <div class="contact__items">
+
+        <div class="contact__item contact-control">
+          <div class="contact-control__head">
+            <label for="your-name" class="form-label">お名前
+              <span class="form-label__required">必須</span>
+            </label>
+          </div>
+          <div class="contact-control__input">
+            <input
+              type="text"
+              name="your-name"
+              id="your-name"
+              class="form-text"
+              placeholder="山田太郎"
+            />
+          </div>
+        </div>
+
+        <div class="contact__item contact-control">
+          <div class="contact-control__head">
+            <label for="your-email" class="form-label">メールアドレス
+              <span class="form-label__required">必須</span></label>
+          </div>
+          <div class="contact-control__input">
+            <input type="email"
+              name="your-email"
+              id="your-email"
+              class="form-text"
+              placeholder="info@example.com"
+            />
+          </div>
+        </div>
+
+        <div class="contact__item contact-control">
+          <div class="contact-control__head">
+            <label for="your-email" class="form-label">お問い合わせ内容
+              <span class="form-label__required">必須</span></label>
+          </div>
+          <div class="contact-control__input__select">
+            <select name="" id="your-age" class="form-select">
+              <option value="">選択してください</option>
+              <option value="">選択項目1</option>
+              <option value="">選択項目2</option>
+              <option value="">選択項目3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="contact__item contact-control">
+          <div class="contact-control__head">
+            <span class="form-label">メールマガジン</span>
+          </div>
+          <div class="contact-control__input">
+            <div class="contact-control__radios">
+              <label class="form-radio">
+                <input
+                  class="form-radio__input"
+                  type="radio"
+                  name="preference"
+                  id=""
+                />
+                <span class="form-radio__text">希望する</span>
+              </label>
+              <label class="form-radio">
+                <input
+                  class="form-radio_input"
+                  type="radio"
+                  name="preference"
+                  id=""
+                />
+                <span class="form-radio_text">希望しない</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__item contact-control">
+          <div class="contact-control__head">
+            <label for="your-message" class="form-label">メッセージ
+              <span class="form-label__required">必須</span>
+            </label>
+          </div>
+          <div class="contact-control__input">
+            <textarea
+              name="your-message"
+              id="your-message"
+              cols="30"
+              rows="10"
+              class="form-textarea"
+              placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。"
+            >
+            </textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__footer">
+        <div class="contact__privacy">
+          <label class="form-checkbox">
+            <input
+              type="checkbox"
+              name="your-privacy"
+              id=""
+              class="form-checkbox__input"
+            />
+            <span class="form-checkbox__text">
+              プライバシーポリシーに合意する
+            </span>
+          </label>
+        </div>
+        
+        <div class="contact__submit">
+          <button type="submit" class="button">上記の内容を送信する</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
 </section>
 
 
