@@ -2491,5 +2491,285 @@ body.no-scroll {
 }
 
 
+// contact
+
+.contact {
+  background: $mono-color-White;
+}
+
+.contact__inner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.contact__heading {
+
+}
+
+.contact__form {
+  margin-top: 24px;
+}
+
+.contact__text {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+.contact__items {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact__item {
+}
+
+.contact-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-control__head {
+
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.form-label__required {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: $text-color-wh;
+  background-color: $accent-color-Red;
+  margin-left: 12px;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.contact-control__input {
+  
+}
+
+.form-text {
+  width: 100%;
+  height: 56px;
+  border: 0;
+  font-size: 16px;
+  background: $mono-color-Gray;
+  border-radius: 8px;
+  padding: 16px;
+
+  &::placeholder {
+    color: $mono-color-DGray;
+    font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  }
+
+  &:focus {
+    outline: $main-color auto 1px;
+    background-color: $sub-color-LBlue;
+  }
+}
+
+.contact-control__input__select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.form-select {
+  box-sizing: border-box;
+  font: inherit;
+  color: $text-color-br;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  border-radius: 8px;
+  border: 0;
+  background-color: $mono-color-Gray;
+  font-weight: 700;
+  padding: 16px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: url(../img/select-control.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 52px;
+
+  &:focus {
+    outline: $main-color auto 1px;
+  }
+}
+
+.contact-control__radios {
+  display: flex;
+  gap: 24px;
+}
+
+.form-radio {
+  box-sizing: border-box;
+  line-height: 1.4375;
+}
+
+.form-radio__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.form-radio__input:checked + .form-radio__text::after {
+  opacity: 1;
+}
+
+.form-radio__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-left: 32px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: 24px;
+    height: 24px;
+    border: none;
+    left: 0;
+    background: $mono-color-Gray;
+  }
+
+  &::after {
+    width: 12px;
+    height: 12px;
+    background: $main-color;
+    left: 6px;
+    opacity: 0;
+  }
+}
+
+.form-radio_input {
+
+}
+
+.form-radio_text {
+
+}
+
+.form-textarea {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  vertical-align: top;
+  border-radius: 8px;
+  border: none;
+  background: $mono-color-Gray;
+  width: 100%;
+  height: 160px;
+  padding: 16px;
+
+  &::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $mono-color-DGray;
+  }
+
+  &:focus {
+    outline: $main-color auto 1px;
+    background-color: $sub-color-LBlue;
+  }
+}
+
+.contact__footer {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.contact__privacy {
+
+}
+
+.form-checkbox {
+  position: relative;
+}
+
+.form-checkbox__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
+  &:checked + .form-checkbox__text {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+}
+
+.form-checkbox__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-left: 36px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translateY(2px);
+    left: 0;
+    inset-block: 0;
+    margin-block: auto;
+  }
+
+  &::before {
+    width: 24px;
+    height: 24px;
+    background: $mono-color-Gray;
+    border-radius: 4px;
+    border: none;
+  }
+
+  &::after {
+    opacity: 0;
+    width: 14px;
+    height: 9px;
+    left: 5px;
+    background: url(../img/check-icon.png) no-repeat center center / contain;
+  }
+}
+
+.contact__submit {
+  margin-top: 24px;
+}
+
+
+
+
 
 
