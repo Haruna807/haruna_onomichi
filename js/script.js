@@ -124,5 +124,72 @@ jQuery(document).ready(function($) {
 });
 
 
+// formのエラー
+
+$(document).ready(function() {
+  // フォーム送信時にバリデーションを行う例
+  $('form').on('submit', function(e) {
+    let isValid = true;
+
+    // 各入力フィールドをチェック
+    $('.form-text, .form-textarea, .form-select').each(function() {
+      if ($(this).is('select')) {
+        // セレクトボックスの場合、選択されていない場合はエラー
+        if ($(this).val() === '') {
+          $(this).addClass('is-error');
+          isValid = false;
+        } else {
+          $(this).removeClass('is-error');
+        }
+      } else if ($(this).is('textarea')) {
+        // テキストエリアの場合、空の場合はエラー
+        if ($(this).val().trim() === '') {
+          $(this).addClass('is-error');
+          isValid = false;
+        } else {
+          $(this).removeClass('is-error');
+        }
+      } else {
+        // その他のテキストフィールドの場合、空の場合はエラー
+        if ($(this).val().trim() === '') {
+          $(this).addClass('is-error');
+          isValid = false;
+        } else {
+          $(this).removeClass('is-error');
+        }
+      }
+    });
+
+    // フォームが無効な場合は送信を防ぐ
+    if (!isValid) {
+      e.preventDefault();
+    }
+  });
+
+  // フォームフィールドの入力時にエラーステータスを更新
+  $('.form-text, .form-textarea, .form-select').on('input change', function() {
+    if ($(this).is('select')) {
+      if ($(this).val() === '') {
+        $(this).addClass('is-error');
+      } else {
+        $(this).removeClass('is-error');
+      }
+    } else if ($(this).is('textarea')) {
+      if ($(this).val().trim() === '') {
+        $(this).addClass('is-error');
+      } else {
+        $(this).removeClass('is-error');
+      }
+    } else {
+      if ($(this).val().trim() === '') {
+        $(this).addClass('is-error');
+      } else {
+        $(this).removeClass('is-error');
+      }
+    }
+  });
+});
+
+
 
 

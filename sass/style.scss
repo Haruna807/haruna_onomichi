@@ -94,6 +94,12 @@ body.no-scroll {
   }
 }
 
+.hidden-sm {
+  @include mq("sm") {
+    display: none;
+  }
+}
+
 // ボタン
 .button {
   display: inline-block;
@@ -2500,6 +2506,12 @@ body.no-scroll {
 .contact__inner {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include mq("lg") {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    max-width: calc(848px + 30px * 2);
+  }
 }
 
 .contact__heading {
@@ -2508,6 +2520,10 @@ body.no-scroll {
 
 .contact__form {
   margin-top: 24px;
+
+  @include mq("lg") {
+    margin-top: 32px;
+  }
 }
 
 .contact__text {
@@ -2515,6 +2531,10 @@ body.no-scroll {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.6;
+
+  @include mq("sm") {
+    font-size: 14px;
+  }
 }
 
 
@@ -2523,6 +2543,10 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include mq("lg") {
+    margin-top: 40px;
+  }
 }
 
 .contact__item {
@@ -2532,16 +2556,35 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @include mq("lg") {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.contact-control-m {
+  @include mq("lg") {
+    align-items: flex-start;
+  }
 }
 
 .contact-control__head {
 
+  @include mq("lg") {
+    width: 180px;
+  }
 }
 
 .form-label {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.6;
+
+  @include mq("sm") {
+    font-size: 16px;
+  }
 }
 
 .form-label__required {
@@ -2550,13 +2593,15 @@ body.no-scroll {
   line-height: 1.6;
   color: $text-color-wh;
   background-color: $accent-color-Red;
-  margin-left: 12px;
+  margin-left: 8px;
   border-radius: 4px;
   padding: 4px 8px;
 }
 
 .contact-control__input {
-  
+  @include mq("lg") {
+    flex-grow: 1;
+  }
 }
 
 .form-text {
@@ -2571,13 +2616,22 @@ body.no-scroll {
   &::placeholder {
     color: $mono-color-DGray;
     font-size: 14px;
-  font-weight: 400;
-  line-height: 160%;
+    font-weight: 400;
+    line-height: 1.6;
+
+    @include mq("lg") {
+      font-size: 16px;
+    }
   }
 
   &:focus {
     outline: $main-color auto 1px;
     background-color: $sub-color-LBlue;
+  }
+
+  &.is-error {
+    outline: $accent-color-Red auto 1px;
+    background-color: #FFF0F7;
   }
 }
 
@@ -2585,6 +2639,11 @@ body.no-scroll {
   position: relative;
   display: inline-block;
   width: 100%;
+
+  @include mq("lg") {
+    flex-grow: 1;
+    width: auto;
+  }
 }
 
 .form-select {
@@ -2610,8 +2669,21 @@ body.no-scroll {
   background-position: center right;
   background-size: 52px;
 
+  @include mq("lg") {
+    font-size: 16px;
+  }
+
   &:focus {
     outline: $main-color auto 1px;
+  }
+
+  &.is-error {
+    outline: $accent-color-Red auto 1px;
+    background-color: #FFF0F7;
+    background-image: url(../img/select-control-error.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 52px;
   }
 }
 
@@ -2633,6 +2705,14 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.form-radio__input:checked + .form-radio__text {
+  font-weight: 700;
+}
+
+.form-radio__input:checked + .form-radio__text::before {
+  border: solid 1px $main-color;
+}
+
 .form-radio__input:checked + .form-radio__text::after {
   opacity: 1;
 }
@@ -2643,6 +2723,10 @@ body.no-scroll {
   line-height: 1.6;
   padding-left: 32px;
   position: relative;
+
+  @include mq("lg") {
+    font-size: 16px;
+  }
 
   &::before,
   &::after {
@@ -2656,7 +2740,7 @@ body.no-scroll {
   &::before {
     width: 24px;
     height: 24px;
-    border: none;
+    border: solid 1px transparent;
     left: 0;
     background: $mono-color-Gray;
   }
@@ -2695,17 +2779,30 @@ body.no-scroll {
     font-weight: 400;
     line-height: 1.6;
     color: $mono-color-DGray;
+
+    @include mq("lg") {
+      font-size: 16px;
+    }
   }
 
   &:focus {
     outline: $main-color auto 1px;
     background-color: $sub-color-LBlue;
   }
+
+  &.is-error {
+    outline: $accent-color-Red auto 1px;
+    background-color: #FFF0F7;
+  }
 }
 
 .contact__footer {
   text-align: center;
   margin-top: 24px;
+
+  @include mq("lg") {
+    margin-top: 40px;
+  }
 }
 
 .contact__privacy {
@@ -2737,6 +2834,10 @@ body.no-scroll {
   line-height: 1.6;
   padding-left: 36px;
 
+  @include mq("lg") {
+    font-size: 16px;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -2766,6 +2867,23 @@ body.no-scroll {
 
 .contact__submit {
   margin-top: 24px;
+
+  @include mq("lg") {
+    margin-top: 40px;
+
+  }
+}
+
+.button__submit {
+  @include mq("lg") {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    width: 240px;
+    height: 40px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+  }
 }
 
 

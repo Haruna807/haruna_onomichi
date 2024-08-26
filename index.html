@@ -713,7 +713,7 @@
     </div>
     <form action="" class="contact__form">
       <p class="contact__text">
-        本キャンペーンに関するお問い合わせは<br>以下のフォームからお願いします。
+        本キャンペーンに関するお問い合わせは<br class="hidden-sm">以下のフォームからお願いします。
       </p>
 
       <div class="contact__items">
@@ -753,7 +753,8 @@
         <div class="contact__item contact-control">
           <div class="contact-control__head">
             <label for="your-question" class="form-label">お問い合わせ内容
-              <span class="form-label__required">必須</span></label>
+              <span class="form-label__required">必須</span>
+            </label>
           </div>
           <div class="contact-control__input__select">
             <select name="your-question" id="your-question" class="form-select">
@@ -793,15 +794,14 @@
           </div>
         </div>
 
-        <div class="contact__item contact-control">
+        <div class="contact__item contact-control contact-control-m">
           <div class="contact-control__head">
             <label for="your-message" class="form-label">メッセージ
               <span class="form-label__required">必須</span>
             </label>
           </div>
           <div class="contact-control__input">
-            <textarea name="your-message" id="your-message" cols="30" rows="10" class="form-textarea" placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。">
-            </textarea>
+            <textarea name="your-message" id="your-message" cols="30" rows="10" class="form-textarea" placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。"></textarea>
           </div>
         </div>
       </div>
@@ -822,7 +822,7 @@
         </div>
 
         <div class="contact__submit">
-          <button type="submit" class="button">上記の内容を送信する</button>
+          <button type="submit" class="button button__submit">上記の内容を送信する</button>
         </div>
 
       </div>

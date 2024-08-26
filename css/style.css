@@ -52,6 +52,12 @@ body.no-scroll {
   }
 }
 
+@media screen and (min-width:600px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
 .button {
   display: inline-block;
   font-size: 16px;
@@ -2680,9 +2686,21 @@ body.no-scroll {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+@media screen and (min-width:900px) {
+  .contact__inner {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    max-width: 908px;
+  }
+}
 
 .contact__form {
   margin-top: 24px;
+}
+@media screen and (min-width:900px) {
+  .contact__form {
+    margin-top: 32px;
+  }
 }
 
 .contact__text {
@@ -2690,6 +2708,11 @@ body.no-scroll {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.6;
+}
+@media screen and (min-width:600px) {
+  .contact__text {
+    font-size: 14px;
+  }
 }
 
 .contact__items {
@@ -2703,6 +2726,11 @@ body.no-scroll {
           flex-direction: column;
   gap: 24px;
 }
+@media screen and (min-width:900px) {
+  .contact__items {
+    margin-top: 40px;
+  }
+}
 
 .contact-control {
   display: -webkit-box;
@@ -2714,11 +2742,42 @@ body.no-scroll {
           flex-direction: column;
   gap: 8px;
 }
+@media screen and (min-width:900px) {
+  .contact-control {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width:900px) {
+  .contact-control-m {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media screen and (min-width:900px) {
+  .contact-control__head {
+    width: 180px;
+  }
+}
 
 .form-label {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.6;
+}
+@media screen and (min-width:600px) {
+  .form-label {
+    font-size: 16px;
+  }
 }
 
 .form-label__required {
@@ -2727,9 +2786,17 @@ body.no-scroll {
   line-height: 1.6;
   color: #FFFFFF;
   background-color: #CE2073;
-  margin-left: 12px;
+  margin-left: 8px;
   border-radius: 4px;
   padding: 4px 8px;
+}
+
+@media screen and (min-width:900px) {
+  .contact-control__input {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .form-text {
@@ -2745,41 +2812,70 @@ body.no-scroll {
   color: #CCCCCC;
   font-size: 14px;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 1.6;
 }
 .form-text::-moz-placeholder {
   color: #CCCCCC;
   font-size: 14px;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 1.6;
 }
 .form-text:-ms-input-placeholder {
   color: #CCCCCC;
   font-size: 14px;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 1.6;
 }
 .form-text::-ms-input-placeholder {
   color: #CCCCCC;
   font-size: 14px;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 1.6;
 }
 .form-text::placeholder {
   color: #CCCCCC;
   font-size: 14px;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 1.6;
+}
+@media screen and (min-width:900px) {
+  .form-text::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .form-text::-moz-placeholder {
+    font-size: 16px;
+  }
+  .form-text:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .form-text::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .form-text::placeholder {
+    font-size: 16px;
+  }
 }
 .form-text:focus {
   outline: #9ED0E0 auto 1px;
   background-color: #E9F6F8;
+}
+.form-text.is-error {
+  outline: #CE2073 auto 1px;
+  background-color: #FFF0F7;
 }
 
 .contact-control__input__select {
   position: relative;
   display: inline-block;
   width: 100%;
+}
+@media screen and (min-width:900px) {
+  .contact-control__input__select {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: auto;
+  }
 }
 
 .form-select {
@@ -2806,8 +2902,21 @@ body.no-scroll {
   background-position: center right;
   background-size: 52px;
 }
+@media screen and (min-width:900px) {
+  .form-select {
+    font-size: 16px;
+  }
+}
 .form-select:focus {
   outline: #9ED0E0 auto 1px;
+}
+.form-select.is-error {
+  outline: #CE2073 auto 1px;
+  background-color: #FFF0F7;
+  background-image: url(../img/select-control-error.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 52px;
 }
 
 .contact-control__radios {
@@ -2831,6 +2940,14 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.form-radio__input:checked + .form-radio__text {
+  font-weight: 700;
+}
+
+.form-radio__input:checked + .form-radio__text::before {
+  border: solid 1px #9ED0E0;
+}
+
 .form-radio__input:checked + .form-radio__text::after {
   opacity: 1;
 }
@@ -2841,6 +2958,11 @@ body.no-scroll {
   line-height: 1.6;
   padding-left: 32px;
   position: relative;
+}
+@media screen and (min-width:900px) {
+  .form-radio__text {
+    font-size: 16px;
+  }
 }
 .form-radio__text::before, .form-radio__text::after {
   content: "";
@@ -2853,7 +2975,7 @@ body.no-scroll {
 .form-radio__text::before {
   width: 24px;
   height: 24px;
-  border: none;
+  border: solid 1px transparent;
   left: 0;
   background: #F5F5F5;
 }
@@ -2908,14 +3030,40 @@ body.no-scroll {
   line-height: 1.6;
   color: #CCCCCC;
 }
+@media screen and (min-width:900px) {
+  .form-textarea::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .form-textarea::-moz-placeholder {
+    font-size: 16px;
+  }
+  .form-textarea:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .form-textarea::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .form-textarea::placeholder {
+    font-size: 16px;
+  }
+}
 .form-textarea:focus {
   outline: #9ED0E0 auto 1px;
   background-color: #E9F6F8;
+}
+.form-textarea.is-error {
+  outline: #CE2073 auto 1px;
+  background-color: #FFF0F7;
 }
 
 .contact__footer {
   text-align: center;
   margin-top: 24px;
+}
+@media screen and (min-width:900px) {
+  .contact__footer {
+    margin-top: 40px;
+  }
 }
 
 .form-checkbox {
@@ -2938,6 +3086,11 @@ body.no-scroll {
   font-weight: 400;
   line-height: 1.6;
   padding-left: 36px;
+}
+@media screen and (min-width:900px) {
+  .form-checkbox__text {
+    font-size: 16px;
+  }
 }
 .form-checkbox__text::before, .form-checkbox__text::after {
   content: "";
@@ -2965,4 +3118,21 @@ body.no-scroll {
 
 .contact__submit {
   margin-top: 24px;
+}
+@media screen and (min-width:900px) {
+  .contact__submit {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width:900px) {
+  .button__submit {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    width: 240px;
+    height: 40px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+  }
 }
