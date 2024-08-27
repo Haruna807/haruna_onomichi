@@ -3136,3 +3136,33 @@ body.no-scroll {
     padding-bottom: 6px;
   }
 }
+
+.footer {
+  margin-top: 40px;
+}
+
+.footer__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.footer__sns__links {
+  margin-top: 24px;
+}
+
+.footer__sns-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
