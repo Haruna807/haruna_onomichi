@@ -3151,6 +3151,16 @@ body.no-scroll {
 
 .footer__sns__links {
   margin-top: 24px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer__sns-btn {
@@ -3162,7 +3172,43 @@ body.no-scroll {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 40px;
+}
+
+.footer__sns-icon {
+  width: 27px;
+  height: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.footer__sns-link img {
+  height: 100%;
+  width: auto;
+}
+
+.is-youtube {
+  height: 27px;
+  padding-bottom: 2px;
+}
+
+.is-instagram {
+  height: 27px;
+}
+
+.is-twitter {
+  height: 27px;
+}
+
+.footer__logo {
+  margin-top: 9px;
+  width: 333px;
+  margin-left: auto;
+  margin-right: auto;
 }
