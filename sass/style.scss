@@ -2959,41 +2959,140 @@ body.no-scroll {
 }
 
 .footer__address {
-
+  background: $mono-color-White;
+  border-radius: 16px;
 }
 
 .footer__address__content {
-
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.footer__address__map {
-
+.footer__address__map iframe {
+  width: 335px;
+  height: 271px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .footer__address__info {
-
+  padding: 0px 24px 24px 24px;
 }
 
 .footer__address__logo {
-
+  width: 153px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__address__details {
+  margin-top: 24px;
 
+  .footer__address__detail {
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      margin-top: 8px;
+    }
+  }
 }
 
 .footer__address__detail {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 
+  &:first-of-type {
+    .footer__address__text {
+      margin-left: 12px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    .footer__address__text {
+      margin-left: 24px;
+    }
+  }
 }
 
 .footer__address__heading {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $main-color;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .footer__address__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.footer__pagetop {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.page-top {
+  width: 75px;
+  height: 78px;
+}
+
+.footer__copyright {
+  position: relative;
+  padding-bottom: 24px;
+  background-color: $sub-color-DBlue;
+  margin-top: 68px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../img/sp/spots_bg_wave_1-sp.png);
+    background-repeat: repeat-x;
+    background-size: 96px auto;
+    background-position: top left;
+    z-index: -1;
+
+    @include mq("lg") {
+      background-image: url(../img/spots_bg_wave_1-pc.png);
+      width: 100%;
+      height: 120px;
+      background-size: 252px auto;
+      top: 270px;
+    }
+  }
 
 }
 
+.footer-copyrught {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $text-color-wh;
+  text-align: center;
+
+}
 
 
 
