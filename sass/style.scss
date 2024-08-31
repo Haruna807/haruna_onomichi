@@ -43,6 +43,11 @@ $breakpoints: (
 
 // 共通
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $header-height;
+}
+
 body {
   font-family: $font-family-ja-1;
   font-size: $font-size-base-sp;
@@ -112,6 +117,11 @@ body.no-scroll {
   background: $mono-color-White;
   box-shadow: 0px 4px 0px 0px $mono-color-Blown;
   color: $text-color-br;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $accent-color-Yellow;
+  }
 
 
   @include mq("lg") {
@@ -299,9 +309,15 @@ body.no-scroll {
 
 .header__link {
   font-size: 14px;
+  transition: color 0.2s, text-decoration 0.2s;
 
   @include mq("xl") {
     font-size: 12px;
+
+    &:hover {
+      text-decoration: underline;
+      color: $sub-color-DBlue;
+    }
   }
 }
 
