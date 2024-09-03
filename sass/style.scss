@@ -1382,12 +1382,16 @@ body.no-scroll {
 
 }
 
+.prizes__heading {
+  margin-top: -4px;
+}
+
 .prizes__contents {
   padding-top: 20px;
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 34px;
   max-width: 600px;
   margin-right: auto;
   margin-left: auto;
@@ -1901,7 +1905,7 @@ body.no-scroll {
 
 .spots__contents {
   background: $sub-color-DBlue;
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 
 .spots__wrap {
@@ -2031,7 +2035,7 @@ body.no-scroll {
 // spotsのスライダー
 
 .spots__slider {
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .swiper-spots {
@@ -2044,7 +2048,7 @@ body.no-scroll {
 }
 
 .swiper-slide {
-  width: calc(100% - 132px);
+  width: calc(100% - 134px);
   height: auto;
   display: flex;
   flex-direction: column;
@@ -2103,7 +2107,7 @@ body.no-scroll {
 }
 
 .spots__slide-text {
-  margin-top: 16px;
+  margin-top: 17px;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.6;
@@ -2384,7 +2388,7 @@ body.no-scroll {
 .entry-requirements__content {
   border: 8px solid $mono-color-White;
   background: rgba(255, 255, 255, 0.50);
-  padding-top: 24px;
+  padding-top: 16px;
   padding-bottom: calc(24px - 8px);
   padding-left: calc(24px - 8px);
   padding-right: calc(23px - 8px);
@@ -2423,7 +2427,7 @@ body.no-scroll {
 
 .entry-requirements__info__item + .entry-requirements__info__item {
   border-top: 1px solid $mono-color-DGray;
-  padding-top: 12px
+  padding-top: 9px
 }
 
 .entry-requirements__info__title {
@@ -2491,10 +2495,10 @@ body.no-scroll {
     &::before {
       content: '';
       position: absolute;
-      left: 5px;
-      top: 8px;
-      width: 4px;
-      height: 4px;
+      left: 7px;
+      top: 11px;
+      width: 3px;
+      height: 3px;
       border-radius: 50%;
       background: $text-color-br;
     }
@@ -2520,7 +2524,7 @@ body.no-scroll {
 }
 
 .contact__inner {
-  padding-top: 40px;
+  padding-top: 37px;
   padding-bottom: 40px;
 
   @include mq("lg") {
@@ -2558,7 +2562,7 @@ body.no-scroll {
   margin-top: 24px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 29px;
 
   @include mq("lg") {
     margin-top: 40px;
@@ -2611,7 +2615,7 @@ body.no-scroll {
   background-color: $accent-color-Red;
   margin-left: 8px;
   border-radius: 4px;
-  padding: 4px 8px;
+  padding: 5px 8px;
 }
 
 .contact-control__input {
@@ -2675,7 +2679,7 @@ body.no-scroll {
   border: 0;
   background-color: $mono-color-Gray;
   font-weight: 700;
-  padding: 16px;
+  padding: 18px 16px 18px 16px;
   position: relative;
   font-size: 14px;
   font-weight: 400;
@@ -2701,6 +2705,10 @@ body.no-scroll {
     background-position: center right;
     background-size: 52px;
   }
+}
+
+.contact__item-radios {
+  margin-top: -7px;
 }
 
 .contact-control__radios {
@@ -2815,7 +2823,7 @@ body.no-scroll {
 
 .contact__footer {
   text-align: center;
-  margin-top: 24px;
+  margin-top: 26px;
 
   @include mq("lg") {
     margin-top: 40px;
@@ -2883,7 +2891,7 @@ body.no-scroll {
 }
 
 .contact__submit {
-  margin-top: 24px;
+  margin-top: 25px;
 
   @include mq("lg") {
     margin-top: 40px;
@@ -2906,7 +2914,7 @@ body.no-scroll {
 // footer
 
 .footer {
-  margin-top: 40px;
+  margin-top: 44px;
 
   @include mq("lg") {
     margin-top: 120px;
@@ -2957,7 +2965,7 @@ body.no-scroll {
 .footer__sns-btn {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 45px;
 }
 
 .footer__sns-icon {
@@ -2995,8 +3003,8 @@ body.no-scroll {
 }
 
 .footer__logo {
-  margin-top: 9px;
-  width: 333px;
+  margin-top: 14px;
+  width: 326px;
   margin-left: auto;
   margin-right: auto;
 
@@ -3014,7 +3022,7 @@ body.no-scroll {
 .footer__address__content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
 
   @include mq("lg") {
     flex-direction: row-reverse;
@@ -3048,7 +3056,7 @@ body.no-scroll {
 }
 
 .footer__address__info {
-  padding: 0px 24px 24px 24px;
+  padding: 0px 24px 29px 24px;
   margin-right: auto;
   margin-left: auto;
 
@@ -3069,7 +3077,7 @@ body.no-scroll {
 }
 
 .footer__address__details {
-  margin-top: 24px;
+  margin-top: 29px;
 
   .footer__address__detail {
     &:nth-of-type(2),
