@@ -38,7 +38,6 @@ $(document).ready(function() {
 
 
 
-
 // スワイパー
 
 // const swiper1 = new Swiper('.about-swiper .swiper', {
@@ -128,41 +127,63 @@ jQuery(document).ready(function($) {
 
 // formのエラー
 
-$(document).ready(function() {
-  $('form').on('submit', function(e) {
-    let isValid = true;
+// $(document).ready(function() {
+//   $('form').on('submit', function(e) {
+//     let isValid = true;
 
-      $('.form-text, .form-textarea, .form-select').each(function() {
-        if ($(this).is('select')) {
-          if ($(this).val() === '') {
-            $(this).addClass('is-error');
-            isValid = false;
-          } else {
-            $(this).removeClass('is-error');
-          }
-        } else if ($(this).is('textarea')) {
-          if ($(this).val().trim() === '') {
-            $(this).addClass('is-error');
-            isValid = false;
-          } else {
-            $(this).removeClass('is-error');
-          }
-        } else {
-          if ($(this).val().trim() === '') {
-            $(this).addClass('is-error');
-            isValid = false;
-          } else {
-            $(this).removeClass('is-error');
-          }
-        }
-      });
-      });
-    });
+//       $('.form-text, .form-textarea, .form-select').each(function() {
+//         if ($(this).is('select')) {
+//           if ($(this).val() === '') {
+//             $(this).addClass('is-error');
+//             isValid = false;
+//           } else {
+//             $(this).removeClass('is-error');
+//           }
+//         } else if ($(this).is('textarea')) {
+//           if ($(this).val().trim() === '') {
+//             $(this).addClass('is-error');
+//             isValid = false;
+//           } else {
+//             $(this).removeClass('is-error');
+//           }
+//         } else {
+//           if ($(this).val().trim() === '') {
+//             $(this).addClass('is-error');
+//             isValid = false;
+//           } else {
+//             $(this).removeClass('is-error');
+//           }
+//         }
+//       });
+//       });
+//     });
 
-    // フォームが無効な場合は送信しない
-    if (!isValid) {
-      e.preventDefault();
-    };
+//     // フォームが無効な場合は送信しない
+//     if (!isValid) {
+//       e.preventDefault();
+//     };
+
+
+
+  const form = $("form");
+  const inputElements = form.find(".form-text, .form-textarea, .form-select");
+  form.on("submit", function (e) {
+    e.preventDefault();
+    inputElements.removeClass("is-error");
+    const isValid = form[0].checkValidity();
+    if (isValid) {
+      alert("送信完了");
+      form[0].reset();
+    }
+  });
+  inputElements.on("invalid", function () {
+    $(this).addClass("is-error");
+  });
+  inputElements.on("input", function () {
+    if (this.checkValidity()) {
+      $(this).removeClass("is-error");
+    }
+  });
 
 
 // ページトップへ戻るボタン
