@@ -281,13 +281,12 @@ body.no-scroll {
     top: 0;
     display: flex;
     flex-direction: row;
-    gap: 4px;
     padding: 0;
     height: $header-height;
     z-index: 0;
     justify-content: flex-end;
     align-items: center;
-    font-size: 19px;
+    font-size: 12px;
     font-weight: 400;
   }
 }
@@ -299,7 +298,7 @@ body.no-scroll {
 
   @include mq("xl") {
     flex-direction: row;
-    gap: 11px;
+    gap: 12px;
   }
 }
 
@@ -1130,6 +1129,7 @@ body.no-scroll {
   @include mq("xl") {
     width: 100px;
     left: 36px;
+    top: 580px;
   }
 }
 
@@ -1398,7 +1398,7 @@ body.no-scroll {
 
   @include mq("lg") {
     max-width: 1084px;
-    padding-top: 30px;
+    padding-top: 36px;
     padding-right: 30px;
     padding-bottom: 49px;
     padding-left: 30px;
@@ -1437,7 +1437,7 @@ body.no-scroll {
 .prizes__triangle-left {
   position: absolute;
   width: 225px;
-  top: 40px;
+  top: 33px;
   left: 0;
 
   @include mq("xl") {
@@ -1448,7 +1448,7 @@ body.no-scroll {
 .prizes__triangle-right {
   position: absolute;
   width: 225px;
-  top: 40px;
+  top: 33px;
   right: 0;
 
   @include mq("xl") {
@@ -1560,7 +1560,17 @@ body.no-scroll {
   @include mq("xl") {
     width: 100px;
     height: 100px;
-    top: -50px;
+    top: -46px;
+  }
+}
+
+.prizes__card:nth-child(3) .prizes__card__number,
+.prizes__card:nth-child(4) .prizes__card__number,
+.prizes__card:nth-child(5) .prizes__card__number {
+  @include mq("xl") {
+    width: 80px;
+    height: 80px;
+    top: -39px;
   }
 }
 
@@ -1615,8 +1625,8 @@ body.no-scroll {
 
   @include mq("lg") {
     font-size: 20px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 33px;
+    margin-bottom: 33px;
   }
 }
 
@@ -1625,7 +1635,7 @@ body.no-scroll {
 .prizes__card:nth-child(5) .prizes__card__lead {
   @include mq("lg") {
     font-size: 16px;
-    margin-top: 12px;
+    margin-top: 11px;
     margin-bottom: 12px;
   }
 }
@@ -1645,8 +1655,8 @@ body.no-scroll {
   @include mq("lg") {
     width: 80px;
     height: 80px;
-    padding-left: 32px;
-    padding-top: 30px;
+    padding-left: 23px;
+    padding-top: 22px;
   }
 
   &::before {
@@ -1662,8 +1672,8 @@ body.no-scroll {
     border-radius: 0 0 8px 0;
 
     @include mq("lg") {
-      width: 80px;
-      height: 80px;
+      width: 97px;
+      height: 97px;
     }
   }
 
@@ -1673,8 +1683,8 @@ body.no-scroll {
     z-index: 6;
 
     @include mq("lg") {
-      width: 26px;
-      height: 26px;
+      width: 32px;
+      height: 32px;
     }
   }
 }
@@ -1685,17 +1695,17 @@ body.no-scroll {
   @include mq("lg") {
     width: 45px;
     height: 45px;
-    padding-left: 16px;
-    padding-top: 16px;
+    padding-left: 5px;
+    padding-top: 3px;
 
     &::before {
-      width: 45px;
-      height: 45px;
+      width: 66px;
+      height: 66px;
     }
 
     img {
-      width: 14.5px;
-      height: 14.5px;
+      width: 20.5px;
+      height: 20.5px;
     }
   }
 }
@@ -1859,7 +1869,7 @@ body.no-scroll {
       width: 100%;
       height: 120px;
       background-size: 252px auto;
-      top: 270px;
+      top: 308px;
     }
   }
 
@@ -1882,6 +1892,7 @@ body.no-scroll {
       width: 100%;
       height: 120px;
       background-size: 252px auto;
+      bottom: 6px;
     }
   }
 
@@ -1899,7 +1910,7 @@ body.no-scroll {
 
   @include mq("xl") {
     left: 36px;
-    top: 730px;
+    top: 758px;
   }
 }
 
@@ -1911,9 +1922,9 @@ body.no-scroll {
 .spots__wrap {
   @include mq("lg") {
     display: flex;
-    gap: 32px;
+    gap: 22px;
     padding-left: max(30px, 50% - 512px);
-    padding-top: 24px;
+    padding-top: 20px;
   }
 
   @include mq("xl") {
@@ -1925,7 +1936,7 @@ body.no-scroll {
   text-align: center;
   
   @include mq("lg") {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 
@@ -1941,8 +1952,8 @@ body.no-scroll {
 
   @include mq("lg") {
     writing-mode: vertical-rl;
-    padding-left: 0;
-    padding-top: 64px;
+    padding-left: 2px;
+    padding-top: 61px;
     font-size: 40px;
     letter-spacing: 10px;
   }
@@ -1964,7 +1975,7 @@ body.no-scroll {
     @include mq("lg") {
       width: 56px;
       height: 56px;
-      left: -4px;
+      left: -1px;
     }
 
   }
@@ -2077,7 +2088,7 @@ body.no-scroll {
   }
 
   @include mq("xl") {
-    width: max(296px, calc(100% - 842px));
+    width: max(296px, calc(100% - 851px));
   }
 }
 
@@ -2128,8 +2139,8 @@ body.no-scroll {
   margin-left: auto;
 
   @include mq("xl") {
-    max-width: 944px;
-    top: -35px;
+    max-width: 966px;
+    top: -32px;
   }
 }
 
@@ -2166,7 +2177,7 @@ body.no-scroll {
   flex-direction: column;
 
   @include mq("lg") {
-    margin-top: 120px;
+    margin-top: 113px;
   }
 
 }
@@ -2394,7 +2405,7 @@ body.no-scroll {
   padding-right: calc(23px - 8px);
 
   @include mq("lg") {
-    padding-top: 40px;
+    padding-top: 37px;
     padding-bottom: calc(40px - 8px);
     padding-left: calc(56px - 8px);
     padding-right: calc(56px - 8px);
@@ -2427,7 +2438,11 @@ body.no-scroll {
 
 .entry-requirements__info__item + .entry-requirements__info__item {
   border-top: 1px solid $mono-color-DGray;
-  padding-top: 9px
+  padding-top: 9px;
+
+  @include mq("lg") {
+    padding-top: 12px;
+  }
 }
 
 .entry-requirements__info__title {
@@ -2492,15 +2507,25 @@ body.no-scroll {
     position: relative;
     padding-left: 17.5px;
 
+    @include mq("lg") {
+      padding-left: 24.5px;
+      margin-top: 1px;
+    }
+
     &::before {
       content: '';
       position: absolute;
-      left: 7px;
+      left: 9px;
       top: 11px;
       width: 3px;
       height: 3px;
       border-radius: 50%;
       background: $text-color-br;
+
+      @include mq("lg") {
+        width: 4px;
+        height: 4px;
+      }
     }
   }
 }
@@ -2524,7 +2549,7 @@ body.no-scroll {
 }
 
 .contact__inner {
-  padding-top: 37px;
+  padding-top: 35px;
   padding-bottom: 40px;
 
   @include mq("lg") {
@@ -2555,17 +2580,22 @@ body.no-scroll {
   @include mq("sm") {
     font-size: 14px;
   }
+
+  @include mq("lg") {
+    font-size: 16px;
+  }
 }
 
 
 .contact__items {
-  margin-top: 24px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   gap: 29px;
 
   @include mq("lg") {
     margin-top: 40px;
+    gap: 24px;
   }
 }
 
@@ -2587,6 +2617,7 @@ body.no-scroll {
 .contact-control-m {
   @include mq("lg") {
     align-items: flex-start;
+    margin-top: 13px;
   }
 }
 
@@ -2679,7 +2710,7 @@ body.no-scroll {
   border: 0;
   background-color: $mono-color-Gray;
   font-weight: 700;
-  padding: 18px 16px 18px 16px;
+  padding: 17px 16px;
   position: relative;
   font-size: 14px;
   font-weight: 400;
@@ -2708,7 +2739,11 @@ body.no-scroll {
 }
 
 .contact__item-radios {
-  margin-top: -7px;
+  margin-top: -4px;
+
+  @include mq("lg") {
+    margin-top: 13px;
+  }
 }
 
 .contact-control__radios {
@@ -2960,12 +2995,20 @@ body.no-scroll {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include mq("lg") {
+    margin-top: 31px;
+  }
 }
 
 .footer__sns-btn {
   display: flex;
   flex-direction: row;
   gap: 45px;
+
+  @include mq("lg") {
+    gap: 47px;
+  }
 }
 
 .footer__sns-icon {
@@ -3009,8 +3052,8 @@ body.no-scroll {
   margin-right: auto;
 
   @include mq("lg") {
-    margin-top: 30px;
-    width: 755px;
+    margin-top: 45px;
+    width: 740px;
   }
 }
 
@@ -3061,6 +3104,8 @@ body.no-scroll {
   margin-left: auto;
 
   @include mq("lg") {
+    width: 409px;
+    height: 206px;
     padding: 10px;
   }
 }
@@ -3078,6 +3123,10 @@ body.no-scroll {
 
 .footer__address__details {
   margin-top: 29px;
+
+  @include mq("lg") {
+    margin-top: 20px;
+  }
 
   .footer__address__detail {
     &:nth-of-type(2),
@@ -3097,12 +3146,20 @@ body.no-scroll {
   flex-direction: row;
   gap: 16px;
 
+  @include mq("lg") {
+    gap: 40px;
+  }
+
   &:first-of-type {
     .footer__address__text {
       margin-left: 12px;
 
       @include mq("sm") {
         margin-left: 14px;
+      }
+
+      @include mq("lg") {
+        margin-left: 17px;
       }
     }
   }
@@ -3114,9 +3171,17 @@ body.no-scroll {
       @include mq("sm") {
         margin-left: 28px;
       }
+
+      @include mq("lg") {
+        margin-left: 32px;
+
+      }
     }
   }
+
 }
+
+
 
 .footer__address__heading {
   font-size: 12px;
