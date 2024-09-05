@@ -1257,8 +1257,15 @@ body.no-scroll {
   background: $mono-color-White;
   margin-right: auto;
   margin-left: auto;
-  width: 226px;
+  width: 230px;
   height: 38px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: $sub-color-DBlue;
+    box-shadow: 0 4px 8px rgba(103, 176, 199, 0.3);
+  }
 
   @include mq("lg") {
     width: 254px;
@@ -2718,7 +2725,7 @@ body.no-scroll {
   background-image: url(../img/select-control.png);
   background-repeat: no-repeat;
   background-position: center right;
-  background-size: 52px;
+  background-size: 56px;
 
   @include mq("lg") {
     font-size: 16px;
@@ -2734,7 +2741,7 @@ body.no-scroll {
     background-image: url(../img/select-control-error.png);
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: 52px;
+    background-size: 56px;
   }
 }
 

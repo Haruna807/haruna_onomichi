@@ -1338,8 +1338,18 @@ body.no-scroll {
   background: #FFFFFF;
   margin-right: auto;
   margin-left: auto;
-  width: 226px;
+  width: 230px;
   height: 38px;
+  border: 2px solid transparent;
+  -webkit-transition: border-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: border-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+.step__follow-button:hover {
+  border-color: #67B0C7;
+  -webkit-box-shadow: 0 4px 8px rgba(103, 176, 199, 0.3);
+          box-shadow: 0 4px 8px rgba(103, 176, 199, 0.3);
 }
 @media screen and (min-width:900px) {
   .step__follow-button {
@@ -2957,7 +2967,7 @@ body.no-scroll {
   background-image: url(../img/select-control.png);
   background-repeat: no-repeat;
   background-position: center right;
-  background-size: 52px;
+  background-size: 56px;
 }
 @media screen and (min-width:900px) {
   .form-select {
@@ -2973,7 +2983,7 @@ body.no-scroll {
   background-image: url(../img/select-control-error.png);
   background-repeat: no-repeat;
   background-position: center right;
-  background-size: 52px;
+  background-size: 56px;
 }
 
 .contact__item-radios {
