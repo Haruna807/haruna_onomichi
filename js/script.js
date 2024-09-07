@@ -40,23 +40,46 @@ $(document).ready(function() {
 
 // スワイパー
 
-// const swiper1 = new Swiper('.about-swiper .swiper', {
-//   autoplay: {
-//     delay: 0,
-//   },
+const swiper1 = new Swiper('.about-swiper .swiper', {
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
 
-//   loop: true,
-//   speed: 3500,
-//   slidesPerView: 4.5,
-//   centeredSlides: true,
-//   preventInteractionOnTransition: true,
-//   spaceBetween: 1,
+  loop: true,
+  speed: 3500,
+  centeredSlides: true,
+  preventInteractionOnTransition: true,
+  spaceBetween: 1,
 
-//   pagination: {
-//     el: '.swiper-pagination',
-//     type: 'progressbar',
-//   },
-// });
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
+
+  breakpoints: {
+    375: {
+      slidesPerView: 4,
+      spaceBetween: 1,
+    },
+    600: {
+      slidesPerView: 5,
+      spaceBetween: 1,
+    },
+    900: {
+      slidesPerView: 6,
+      spaceBetween: 1,
+    },
+    1200: {
+      slidesPerView: 7,
+      spaceBetween: 1,
+    },
+    1440: {
+      slidesPerView: 8,
+      spaceBetween: 1,
+    },
+  },
+});
 
 
 // モーダルウィンドウ
