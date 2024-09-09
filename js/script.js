@@ -47,10 +47,11 @@ const swiper1 = new Swiper('.about-swiper .swiper', {
   },
 
   loop: true,
-  speed: 3500,
+  speed: 3000,
+  slidesPerView: 4.5,
   centeredSlides: true,
   preventInteractionOnTransition: true,
-  spaceBetween: 1,
+  spaceBetween: 5,
 
   pagination: {
     el: '.swiper-pagination',
@@ -58,25 +59,21 @@ const swiper1 = new Swiper('.about-swiper .swiper', {
   },
 
   breakpoints: {
-    375: {
-      slidesPerView: 4,
-      spaceBetween: 1,
-    },
     600: {
       slidesPerView: 5,
-      spaceBetween: 1,
+      spaceBetween: 7,
     },
     900: {
       slidesPerView: 6,
-      spaceBetween: 1,
+      spaceBetween: 7,
     },
     1200: {
-      slidesPerView: 7,
-      spaceBetween: 1,
+      slidesPerView: 6.5,
+      spaceBetween: 8,
     },
     1440: {
-      slidesPerView: 8,
-      spaceBetween: 1,
+      slidesPerView: 7,
+      spaceBetween: 10,
     },
   },
 });

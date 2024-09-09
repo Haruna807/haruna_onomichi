@@ -950,9 +950,11 @@ body.no-scroll {
   margin-left: -12px;
   margin-right: -12px;
   justify-content: center;
+  margin-bottom: -3px;
 
   @include mq("lg") {
     margin-top: 154px;
+    margin-bottom: -7px;
   }
 
   @include mq("xl") {
@@ -987,50 +989,33 @@ body.no-scroll {
   width: 100%;
   position: relative;
   overflow: hidden;
-  margin-top: -3px;
-
-  @include mq("lg") {
-    margin-top: -7px;
-  }
 }
 
 .about-swiper .swiper-wrapper {
   transition-timing-function: linear;
-  display: flex;
 }
 
 
 .about-swiper .swiper-slide {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0;
-  width: 100px !important;
   flex-shrink: 0;
-  margin-right: 10px;
-  border-radius: 24px;
   overflow: hidden;
+  border-radius: 12px;
+  padding: 0;
 
   @include mq("sm") {
-    width: 150px !important;
+    border-radius: 18px;
   }
 
   @include mq("lg") {
-    width: 200px !important;
-    margin-right: 20px;
-    border-radius: 24px !important;
+    border-radius: 24px;
   }
 }
 
 .about-swiper .swiper-slide img{
   display: block;
-  min-width: 100%;
   object-fit: cover;
-
-
-  @include mq("lg") {
-    border-radius: 24px !important;
-  }
+  width: 100%;
 }
 
 // how-to-entry
