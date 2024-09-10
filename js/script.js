@@ -40,7 +40,45 @@ $(document).ready(function() {
 
 // スワイパー
 
-const swiper1 = new Swiper('.about-swiper .swiper', {
+// const swiper1 = new Swiper('.about-swiper .swiper', {
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+
+//   loop: true,
+//   speed: 3000,
+//   slidesPerView: 4.5,
+//   centeredSlides: true,
+//   preventInteractionOnTransition: true,
+//   spaceBetween: 5,
+
+//   pagination: {
+//     el: '.swiper-pagination',
+//     type: 'progressbar',
+//   },
+
+//   breakpoints: {
+//     600: {
+//       slidesPerView: 5,
+//       spaceBetween: 7,
+//     },
+//     900: {
+//       slidesPerView: 6,
+//       spaceBetween: 7,
+//     },
+//     1200: {
+//       slidesPerView: 6.5,
+//       spaceBetween: 8,
+//     },
+//     1440: {
+//       slidesPerView: 7,
+//       spaceBetween: 10,
+//     },
+//   },
+// });
+
+const swiper1 = new Swiper("#js-about-swiper", {
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
@@ -49,14 +87,7 @@ const swiper1 = new Swiper('.about-swiper .swiper', {
   loop: true,
   speed: 3000,
   slidesPerView: 4.5,
-  centeredSlides: true,
-  preventInteractionOnTransition: true,
   spaceBetween: 5,
-
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'progressbar',
-  },
 
   breakpoints: {
     600: {
@@ -64,14 +95,15 @@ const swiper1 = new Swiper('.about-swiper .swiper', {
       spaceBetween: 7,
     },
     900: {
-      slidesPerView: 6,
-      spaceBetween: 7,
-    },
-    1200: {
-      slidesPerView: 6.5,
+      slidesPerView: 5.5,
       spaceBetween: 8,
     },
+    1200: {
+      slidesPerView: 6,
+      spaceBetween: 10,
+    },
     1440: {
+      speed: 2500,
       slidesPerView: 7,
       spaceBetween: 10,
     },

@@ -985,38 +985,49 @@ body.no-scroll {
 
 // スワイパー
 
-.swiper{
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
+// .swiper{
+//   width: 100%;
+//   position: relative;
+//   overflow: hidden;
+// }
 
-.about-swiper .swiper-wrapper {
+// .about-swiper .swiper-wrapper {
+//   transition-timing-function: linear;
+// }
+
+.about-swiper-wrapper {
+  -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
 
-
-.about-swiper .swiper-slide {
-  align-items: center;
-  flex-shrink: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  padding: 0;
-
-  @include mq("sm") {
-    border-radius: 18px;
-  }
-
-  @include mq("lg") {
-    border-radius: 24px;
-  }
+.about-swiper-image {
+  border-radius: 10px;
 }
 
-.about-swiper .swiper-slide img{
-  display: block;
-  object-fit: cover;
-  width: 100%;
-}
+
+
+
+// .about-swiper .swiper-slide {
+//   align-items: center;
+//   flex-shrink: 0;
+//   overflow: hidden;
+//   border-radius: 12px;
+//   padding: 0;
+
+//   @include mq("sm") {
+//     border-radius: 18px;
+//   }
+
+//   @include mq("lg") {
+//     border-radius: 24px;
+//   }
+// }
+
+// .about-swiper .swiper-slide img{
+//   display: block;
+//   object-fit: cover;
+//   width: 100%;
+// }
 
 // how-to-entry
 
@@ -1533,6 +1544,7 @@ body.no-scroll {
   @include mq("lg") {
     width: 100%;
   }
+
 }
 
 @include mq("lg") {
@@ -1598,9 +1610,20 @@ body.no-scroll {
   align-items: center;
   height: 100%;
   overflow: hidden;
+  border: 2px solid $mono-color-White;
+
+  &:hover {
+    border: 2px solid $main-color;
+
+    @include mq("lg") {
+      border: 3px solid $main-color;
+    }
+  }
+
 
   @include mq("lg") {
     border-radius: 24px;
+    border: 3px solid $mono-color-White;
   }
 }
 
@@ -1609,6 +1632,11 @@ body.no-scroll {
 .prizes__card:nth-child(5) .prizes__card__contents {
   @include mq("lg") {
     border-radius: 16px;
+    border: 3px solid $mono-color-White;
+
+    &:hover {
+      border: 3px solid $main-color;
+    }
   }
 }
 
@@ -1616,11 +1644,17 @@ body.no-scroll {
   width: 100%;
   height: auto;
   object-fit: cover;
+  overflow: hidden;
 
   img {
     width: 100%;
     height: auto;
+    transition: transform 0.4s;
   }
+}
+
+.prizes__card:hover .prizes__card__image img {
+  transform: scale(1.1);
 }
 
 .prizes__card__lead {
@@ -2068,11 +2102,11 @@ body.no-scroll {
   height: auto;
 }
 
-.swiper-wrapper {
+.swiper-spots .swiper-wrapper {
   display: flex;
 }
 
-.swiper-slide {
+.swiper-spots .swiper-slide {
   width: calc(100% - 134px);
   height: auto;
   display: flex;

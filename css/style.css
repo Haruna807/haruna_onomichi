@@ -1028,43 +1028,13 @@ body.no-scroll {
   width: 100%;
 }
 
-.swiper {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-swiper .swiper-wrapper {
+.about-swiper-wrapper {
   -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 
-.about-swiper .swiper-slide {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  padding: 0;
-}
-@media screen and (min-width:600px) {
-  .about-swiper .swiper-slide {
-    border-radius: 18px;
-  }
-}
-@media screen and (min-width:900px) {
-  .about-swiper .swiper-slide {
-    border-radius: 24px;
-  }
-}
-
-.about-swiper .swiper-slide img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
+.about-swiper-image {
+  border-radius: 10px;
 }
 
 .how-to-entry {
@@ -1709,10 +1679,20 @@ body.no-scroll {
           align-items: center;
   height: 100%;
   overflow: hidden;
+  border: 2px solid #FFFFFF;
+}
+.prizes__card__contents:hover {
+  border: 2px solid #9ED0E0;
+}
+@media screen and (min-width:900px) {
+  .prizes__card__contents:hover {
+    border: 3px solid #9ED0E0;
+  }
 }
 @media screen and (min-width:900px) {
   .prizes__card__contents {
     border-radius: 24px;
+    border: 3px solid #FFFFFF;
   }
 }
 
@@ -1721,6 +1701,12 @@ body.no-scroll {
   .prizes__card:nth-child(4) .prizes__card__contents,
   .prizes__card:nth-child(5) .prizes__card__contents {
     border-radius: 16px;
+    border: 3px solid #FFFFFF;
+  }
+  .prizes__card:nth-child(3) .prizes__card__contents:hover,
+  .prizes__card:nth-child(4) .prizes__card__contents:hover,
+  .prizes__card:nth-child(5) .prizes__card__contents:hover {
+    border: 3px solid #9ED0E0;
   }
 }
 
@@ -1729,10 +1715,20 @@ body.no-scroll {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
 }
 .prizes__card__image img {
   width: 100%;
   height: auto;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.prizes__card:hover .prizes__card__image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .prizes__card__lead {
@@ -2214,13 +2210,13 @@ body.no-scroll {
   height: auto;
 }
 
-.swiper-wrapper {
+.swiper-spots .swiper-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.swiper-slide {
+.swiper-spots .swiper-slide {
   width: calc(100% - 134px);
   height: auto;
   display: -webkit-box;
@@ -2250,12 +2246,12 @@ body.no-scroll {
   margin: 0 8px;
 }
 @media screen and (min-width:600px) {
-  .swiper-slide {
+  .swiper-spots .swiper-slide {
     width: 50%;
   }
 }
 @media screen and (min-width:900px) {
-  .swiper-slide {
+  .swiper-spots .swiper-slide {
     width: calc(100% - 450px);
     border-radius: 24px;
     padding-bottom: 40px;
@@ -2264,7 +2260,7 @@ body.no-scroll {
   }
 }
 @media screen and (min-width:1200px) {
-  .swiper-slide {
+  .swiper-spots .swiper-slide {
     width: max(296px, 100% - 851px);
   }
 }
