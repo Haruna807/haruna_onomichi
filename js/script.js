@@ -40,44 +40,6 @@ $(document).ready(function() {
 
 // スワイパー
 
-// const swiper1 = new Swiper('.about-swiper .swiper', {
-//   autoplay: {
-//     delay: 0,
-//     disableOnInteraction: false,
-//   },
-
-//   loop: true,
-//   speed: 3000,
-//   slidesPerView: 4.5,
-//   centeredSlides: true,
-//   preventInteractionOnTransition: true,
-//   spaceBetween: 5,
-
-//   pagination: {
-//     el: '.swiper-pagination',
-//     type: 'progressbar',
-//   },
-
-//   breakpoints: {
-//     600: {
-//       slidesPerView: 5,
-//       spaceBetween: 7,
-//     },
-//     900: {
-//       slidesPerView: 6,
-//       spaceBetween: 7,
-//     },
-//     1200: {
-//       slidesPerView: 6.5,
-//       spaceBetween: 8,
-//     },
-//     1440: {
-//       slidesPerView: 7,
-//       spaceBetween: 10,
-//     },
-//   },
-// });
-
 const swiper1 = new Swiper("#js-about-swiper", {
   autoplay: {
     delay: 0,
@@ -86,7 +48,7 @@ const swiper1 = new Swiper("#js-about-swiper", {
 
   loop: true,
   speed: 3000,
-  slidesPerView: 4.5,
+  slidesPerView: 3.7,
   spaceBetween: 5,
 
   breakpoints: {
@@ -178,44 +140,6 @@ jQuery(document).ready(function($) {
 
 
 // formのエラー
-
-// $(document).ready(function() {
-//   $('form').on('submit', function(e) {
-//     let isValid = true;
-
-//       $('.form-text, .form-textarea, .form-select').each(function() {
-//         if ($(this).is('select')) {
-//           if ($(this).val() === '') {
-//             $(this).addClass('is-error');
-//             isValid = false;
-//           } else {
-//             $(this).removeClass('is-error');
-//           }
-//         } else if ($(this).is('textarea')) {
-//           if ($(this).val().trim() === '') {
-//             $(this).addClass('is-error');
-//             isValid = false;
-//           } else {
-//             $(this).removeClass('is-error');
-//           }
-//         } else {
-//           if ($(this).val().trim() === '') {
-//             $(this).addClass('is-error');
-//             isValid = false;
-//           } else {
-//             $(this).removeClass('is-error');
-//           }
-//         }
-//       });
-//       });
-//     });
-
-//     // フォームが無効な場合は送信しない
-//     if (!isValid) {
-//       e.preventDefault();
-//     };
-
-
 
   const form = $("form");
   const inputElements = form.find(".form-text, .form-textarea, .form-select");

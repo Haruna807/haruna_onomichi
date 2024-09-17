@@ -1033,7 +1033,7 @@ body.no-scroll {
 
 .how-to-entry {
   position: relative;
-  margin-top: 64px;
+  margin-top: 65px;
 
   @include mq("lg") {
     margin-top: 120px;
@@ -1246,7 +1246,7 @@ body.no-scroll {
 }
 
 .step__text {
-  margin-top: 16px;
+  margin-top: 16.4px;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.6;
@@ -1610,20 +1610,20 @@ body.no-scroll {
   align-items: center;
   height: 100%;
   overflow: hidden;
-  border: 2px solid $mono-color-White;
+  outline: 2px solid $mono-color-White;
 
   &:hover {
-    border: 2px solid $main-color;
+    outline: 2px solid $main-color;
 
     @include mq("lg") {
-      border: 3px solid $main-color;
+      outline: 3px solid $main-color;
     }
   }
 
 
   @include mq("lg") {
     border-radius: 24px;
-    border: 3px solid $mono-color-White;
+    outline: 3px solid $mono-color-White;
   }
 }
 
@@ -1632,10 +1632,10 @@ body.no-scroll {
 .prizes__card:nth-child(5) .prizes__card__contents {
   @include mq("lg") {
     border-radius: 16px;
-    border: 3px solid $mono-color-White;
+    outline: 3px solid $mono-color-White;
 
     &:hover {
-      border: 3px solid $main-color;
+      outline: 3px solid $main-color;
     }
   }
 }
@@ -1975,9 +1975,6 @@ body.no-scroll {
     padding-top: 20px;
   }
 
-  @include mq("xl") {
-    // padding-left: calc(30px + (100% - 1084px) / 2);
-  }
 }
 
 .spots-heading {
@@ -2094,7 +2091,7 @@ body.no-scroll {
 // spotsのスライダー
 
 .spots__slider {
-  margin-top: 28px;
+  margin-top: 25px;
 }
 
 .swiper-spots {

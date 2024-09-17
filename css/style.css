@@ -1039,7 +1039,7 @@ body.no-scroll {
 
 .how-to-entry {
   position: relative;
-  margin-top: 64px;
+  margin-top: 65px;
 }
 @media screen and (min-width:900px) {
   .how-to-entry {
@@ -1278,7 +1278,7 @@ body.no-scroll {
 }
 
 .step__text {
-  margin-top: 16px;
+  margin-top: 16.4px;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.6;
@@ -1679,20 +1679,20 @@ body.no-scroll {
           align-items: center;
   height: 100%;
   overflow: hidden;
-  border: 2px solid #FFFFFF;
+  outline: 2px solid #FFFFFF;
 }
 .prizes__card__contents:hover {
-  border: 2px solid #9ED0E0;
+  outline: 2px solid #9ED0E0;
 }
 @media screen and (min-width:900px) {
   .prizes__card__contents:hover {
-    border: 3px solid #9ED0E0;
+    outline: 3px solid #9ED0E0;
   }
 }
 @media screen and (min-width:900px) {
   .prizes__card__contents {
     border-radius: 24px;
-    border: 3px solid #FFFFFF;
+    outline: 3px solid #FFFFFF;
   }
 }
 
@@ -1701,12 +1701,12 @@ body.no-scroll {
   .prizes__card:nth-child(4) .prizes__card__contents,
   .prizes__card:nth-child(5) .prizes__card__contents {
     border-radius: 16px;
-    border: 3px solid #FFFFFF;
+    outline: 3px solid #FFFFFF;
   }
   .prizes__card:nth-child(3) .prizes__card__contents:hover,
   .prizes__card:nth-child(4) .prizes__card__contents:hover,
   .prizes__card:nth-child(5) .prizes__card__contents:hover {
-    border: 3px solid #9ED0E0;
+    outline: 3px solid #9ED0E0;
   }
 }
 
@@ -2078,6 +2078,7 @@ body.no-scroll {
     padding-top: 20px;
   }
 }
+
 .spots-heading {
   text-align: center;
 }
@@ -2202,7 +2203,7 @@ body.no-scroll {
 }
 
 .spots__slider {
-  margin-top: 28px;
+  margin-top: 25px;
 }
 
 .swiper-spots {
