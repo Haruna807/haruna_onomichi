@@ -2046,7 +2046,7 @@ body.no-scroll {
     width: 100%;
     height: 120px;
     background-size: 252px auto;
-    bottom: 6px;
+    bottom: 12px;
   }
 }
 
@@ -2362,7 +2362,7 @@ body.no-scroll {
 }
 @media screen and (min-width:900px) {
   .qa {
-    margin-top: 113px;
+    margin-top: 110px;
   }
 }
 
