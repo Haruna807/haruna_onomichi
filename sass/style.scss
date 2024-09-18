@@ -29,10 +29,12 @@ $font-size-base-pc: 16px;
 $header-height: 64px;
 
 $breakpoints: (
+  xs: "screen and (max-width: 336px)",
   sm: "screen and (min-width:600px)",
   md: "screen and (min-width:768px)",
   lg: "screen and (min-width:900px)",
   xl: "screen and (min-width:1200px)",
+  xxl: "screen and (min-width:1700px)",
 );
 
 @mixin mq($breakpoint: lg) {
@@ -130,6 +132,9 @@ body.no-scroll {
     background-color: $accent-color-Yellow;
   }
 
+  @include mq("xs") {
+    font-size: 13px;
+  }
 
   @include mq("lg") {
     padding-top: 8px;
@@ -353,6 +358,11 @@ body.no-scroll {
   padding-bottom: 60px;
   overflow-y: auto;
 
+  @include mq("xs") {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
   &.is-checked {
     display: block;
   }
@@ -444,6 +454,10 @@ body.no-scroll {
   img {
     width: 100%;
 
+    @include mq("xs") {
+      max-width: 300px;
+    }
+
     @include mq("lg") {
       max-width: 520px;
     }
@@ -478,6 +492,10 @@ body.no-scroll {
   width: 142px;
   margin-top: 17px;
 
+  @include mq("xs") {
+    width: 130px;
+  }
+
   @include mq("lg") {
     width: 244px;
     margin-top: 0;
@@ -487,6 +505,10 @@ body.no-scroll {
 .fv__present {
   width: 110px;
   margin-top: 10px;
+
+  @include mq("xs") {
+    width: 100px;
+  }
 
   @include mq("lg") {
     width: 180px;
@@ -535,6 +557,10 @@ body.no-scroll {
   flex-direction: row;
   gap: 142px;
   margin-top: -161px;
+
+  @include mq("xs") {
+    gap: 130px;
+  }
 
   @include mq("sm") {
     justify-content: center;
@@ -698,7 +724,7 @@ body.no-scroll {
   }
 
   @include mq("lg") {
-    right: calc(50% + 150px);
+    right: calc(50% + 172px);
     bottom: 55px;
     left: auto;
     width: 427px;
@@ -708,6 +734,10 @@ body.no-scroll {
   @include mq("xl") {
     right: calc(50% + 432px);
     bottom: -44px;
+  }
+
+  @include mq("xxl") {
+    right: calc(50% + 600px);
   }
 }
 
@@ -827,8 +857,9 @@ body.no-scroll {
 
   }
 
-  @include mq("sm") {
-    
+  @include mq("xs") {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   @include mq("lg") {
@@ -858,6 +889,10 @@ body.no-scroll {
   position: absolute;
   left:  calc(50% + 58px);
   top: 30px;
+
+  @include mq("xs") {
+    left: calc(50% + 45px);
+  }
 
   @include mq("lg") {
     top: 47px;
@@ -923,6 +958,7 @@ body.no-scroll {
   border-bottom: 2px dashed $main-color;
   padding-bottom: 6px;
   display: inline;
+
 
   @include mq("lg") {
     font-size: 20px;
@@ -1003,31 +1039,6 @@ body.no-scroll {
 .about-swiper-image {
   border-radius: 10px;
 }
-
-
-
-
-// .about-swiper .swiper-slide {
-//   align-items: center;
-//   flex-shrink: 0;
-//   overflow: hidden;
-//   border-radius: 12px;
-//   padding: 0;
-
-//   @include mq("sm") {
-//     border-radius: 18px;
-//   }
-
-//   @include mq("lg") {
-//     border-radius: 24px;
-//   }
-// }
-
-// .about-swiper .swiper-slide img{
-//   display: block;
-//   object-fit: cover;
-//   width: 100%;
-// }
 
 // how-to-entry
 
@@ -1700,6 +1711,13 @@ body.no-scroll {
   padding-left: 14px;
   padding-top: 12px;
 
+  @include mq("xs") {
+    padding-left: 16px;
+    padding-top: 17px;
+  }
+
+
+
   @include mq("lg") {
     width: 80px;
     height: 80px;
@@ -1719,6 +1737,11 @@ body.no-scroll {
     z-index: 5;
     border-radius: 0 0 8px 0;
 
+    @include mq("xs") {
+      width: 30px;
+      height: 30px;
+    }
+
     @include mq("lg") {
       width: 97px;
       height: 97px;
@@ -1729,6 +1752,11 @@ body.no-scroll {
     width: 11.52px;
     height: 11.52px;
     z-index: 6;
+
+    @include mq("xs") {
+      width: 9px;
+      height: 9px;
+    }
 
     @include mq("lg") {
       width: 32px;
@@ -1829,6 +1857,10 @@ body.no-scroll {
   max-width: 600px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+  @include mq("xs") {
+    width: calc(100% - 10px);
+  }
+
   @include mq("lg") {
     width: 480px;
     height: 650px;
@@ -1876,6 +1908,11 @@ body.no-scroll {
   margin-top: 12px;
   margin-left: 20px;
   margin-right: 20px;
+
+  @include mq("xs") {
+    margin-left: 11px;
+    margin-right: 11px;
+  }
 
   @include mq("lg") {
     font-size: 16px;
@@ -2123,6 +2160,7 @@ body.no-scroll {
   @include mq("sm") {
     width: calc(50%);
   }
+
 
   @include mq("lg") {
     width: calc(100% - 450px);
@@ -3062,6 +3100,11 @@ body.no-scroll {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @include mq("lg") {
     width: 33px;
@@ -3144,9 +3187,10 @@ body.no-scroll {
 }
 
 .footer__address__info {
-  padding: 0px 24px 29px 24px;
+  padding: 0px 8px 29px 8px;
   margin-right: auto;
   margin-left: auto;
+
 
   @include mq("lg") {
     width: 409px;
@@ -3190,6 +3234,10 @@ body.no-scroll {
   display: flex;
   flex-direction: row;
   gap: 16px;
+
+  @include mq("xs") {
+    gap: 13px;
+  }
 
   @include mq("lg") {
     gap: 40px;
@@ -3235,6 +3283,10 @@ body.no-scroll {
   padding-left: 16px;
   position: relative;
 
+  @include mq("xs") {
+    font-size: 11px;
+  }
+
   @include mq("sm") {
     font-size: 14px;
   }
@@ -3260,6 +3312,10 @@ body.no-scroll {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.6;
+
+  @include mq("xs") {
+    font-size: 11px;
+  }
 
   @include mq("sm") {
     font-size: 14px;
