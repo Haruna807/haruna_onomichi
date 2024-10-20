@@ -129,10 +129,11 @@ body.no-scroll {
 @media screen and (min-width:900px) {
   .button-small {
     height: 40px;
-    padding-inline: 20px;
-    padding-top: 4px;
+    padding-inline: 22px;
+    padding-top: 5px;
     padding-bottom: 31.5px;
-    font-size: 17px;
+    font-size: 16px;
+    border-width: 2px;
   }
 }
 
@@ -1727,14 +1728,18 @@ body.no-scroll {
   height: 100%;
   overflow: hidden;
   outline: 2px solid #FFFFFF;
+  border: none;
 }
 .prizes__card__contents:hover {
   outline: 2px solid #9ED0E0;
 }
 @media screen and (min-width:900px) {
   .prizes__card__contents:hover {
-    outline: 3px solid #9ED0E0;
+    outline: 5px solid #9ED0E0;
   }
+}
+.prizes__card__contents:hover .prizes__card__icon::before {
+  background-color: #9ED0E0;
 }
 @media screen and (min-width:900px) {
   .prizes__card__contents {
@@ -1743,17 +1748,22 @@ body.no-scroll {
   }
 }
 
+.prizes__card:nth-child(3) .prizes__card__contents,
+.prizes__card:nth-child(4) .prizes__card__contents,
+.prizes__card:nth-child(5) .prizes__card__contents {
+  border: none;
+}
 @media screen and (min-width:900px) {
   .prizes__card:nth-child(3) .prizes__card__contents,
   .prizes__card:nth-child(4) .prizes__card__contents,
   .prizes__card:nth-child(5) .prizes__card__contents {
     border-radius: 16px;
-    outline: 3px solid #FFFFFF;
+    outline: 5px solid #FFFFFF;
   }
   .prizes__card:nth-child(3) .prizes__card__contents:hover,
   .prizes__card:nth-child(4) .prizes__card__contents:hover,
   .prizes__card:nth-child(5) .prizes__card__contents:hover {
-    outline: 3px solid #9ED0E0;
+    outline: 5px solid #9ED0E0;
   }
 }
 
@@ -1767,15 +1777,15 @@ body.no-scroll {
 .prizes__card__image img {
   width: 100%;
   height: auto;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .prizes__card:hover .prizes__card__image img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .prizes__card__lead {
@@ -1832,6 +1842,7 @@ body.no-scroll {
           justify-content: center;
   padding-left: 14px;
   padding-top: 12px;
+  z-index: 6;
 }
 @media screen and (max-width: 336px) {
   .prizes__card__icon {
@@ -1859,6 +1870,7 @@ body.no-scroll {
           clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   z-index: 5;
   border-radius: 0 0 8px 0;
+  border: none;
 }
 @media screen and (max-width: 336px) {
   .prizes__card__icon::before {
@@ -1872,19 +1884,19 @@ body.no-scroll {
     height: 97px;
   }
 }
-.prizes__card__icon img {
+.prizes__card__icon svg {
   width: 11.52px;
   height: 11.52px;
-  z-index: 6;
+  z-index: 10;
 }
 @media screen and (max-width: 336px) {
-  .prizes__card__icon img {
+  .prizes__card__icon svg {
     width: 9px;
     height: 9px;
   }
 }
 @media screen and (min-width:900px) {
-  .prizes__card__icon img {
+  .prizes__card__icon svg {
     width: 32px;
     height: 32px;
   }
@@ -1905,9 +1917,9 @@ body.no-scroll {
     width: 66px;
     height: 66px;
   }
-  .prizes__card:nth-child(3) .prizes__card__icon img,
-  .prizes__card:nth-child(4) .prizes__card__icon img,
-  .prizes__card:nth-child(5) .prizes__card__icon img {
+  .prizes__card:nth-child(3) .prizes__card__icon svg,
+  .prizes__card:nth-child(4) .prizes__card__icon svg,
+  .prizes__card:nth-child(5) .prizes__card__icon svg {
     width: 20.5px;
     height: 20.5px;
   }
@@ -2070,13 +2082,24 @@ body.no-scroll {
 
 .spots {
   position: relative;
-  margin-top: 215px;
+  margin-top: 224px;
   padding-bottom: 45px;
+}
+@media screen and (min-width:600px) {
+  .spots {
+    margin-top: 258px;
+  }
+}
+@media screen and (min-width:768px) {
+  .spots {
+    margin-top: 310px;
+  }
 }
 @media screen and (min-width:900px) {
   .spots {
     padding-bottom: 115px;
     padding-top: 168px;
+    margin-top: 240px;
   }
 }
 .spots::before {
@@ -2420,10 +2443,20 @@ body.no-scroll {
 
 .swiper-button-next {
   background-image: url(../img/slider__button-right.png);
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.swiper-button-next:hover {
+  opacity: 0.7;
 }
 
 .swiper-button-prev {
   background-image: url(../img/slider__button-left.png);
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.swiper-button-prev:hover {
+  opacity: 0.7;
 }
 
 .qa {
